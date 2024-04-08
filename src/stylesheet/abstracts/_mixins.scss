@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+/// Events wrapper
+@mixin on-event() {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-within {
+    @content;
+  }
+}
