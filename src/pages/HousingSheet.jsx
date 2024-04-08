@@ -4,7 +4,9 @@ const HousingSheet = () => {
   const housingId = useParams();
   return (
     <PageLayout currentPage={'HousingSheet'}>
-      <h1>Fiche logement {housingId.id}</h1>
+      <main>
+        <h1>Fiche logement {housingId.id}</h1>
+      </main>
     </PageLayout>
   );
 };

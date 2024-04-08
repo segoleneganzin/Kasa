@@ -6,7 +6,7 @@ const PageLayout = ({ children, currentPage }) => {
   return (
     <div>
       <Header currentPage={currentPage} />
-      <main>{children}</main>
+      {children}
       <Footer />
     </div>
   );
