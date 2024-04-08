@@ -1,15 +1,12 @@
-import PropTypes from 'prop-types';
 import Menu from './Menu';
 
-const Header = ({ currentPage }) => {
+const Header = () => {
   return (
     <div>
       Kasa
-      <Menu currentPage={currentPage} />
+      <Menu />
     </div>
   );
 };
-Header.propTypes = {
-  currentPage: PropTypes.string,
-};
+
 export default Header;

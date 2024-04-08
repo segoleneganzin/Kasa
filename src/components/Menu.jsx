@@ -1,13 +1,15 @@
-import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-const Menu = ({ currentPage }) => {
+const Menu = () => {
+  const location = useLocation();
+  const currentUrl = location.pathname;
   return (
     <nav className='menu'>
       <ul>
         <li>
           <Link
             to='/'
-            className={currentPage === 'Home' ? 'menu__currentPage' : ''}
+            className={currentUrl === '/' ? 'menu__currentPage' : ''}
           >
             Accueil
           </Link>
@@ -15,7 +17,7 @@ const Menu = ({ currentPage }) => {
         <li>
           <Link
             to='/apropos'
-            className={currentPage === 'AboutUs' ? 'menu__currentPage' : ''}
+            className={currentUrl === '/apropos' ? 'menu__currentPage' : ''}
           >
             A propos
           </Link>
@@ -24,7 +26,5 @@ const Menu = ({ currentPage }) => {
     </nav>
   );
 };
-Menu.propTypes = {
-  currentPage: PropTypes.string,
-};
+
 export default Menu;
