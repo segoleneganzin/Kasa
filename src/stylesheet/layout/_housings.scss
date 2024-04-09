@@ -1,0 +1,13 @@
+.housings {
+  background-color: $light-grey;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 50px;
+  padding: 56px 50px;
+  position: relative;
+  @media screen and (max-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -10,11 +10,10 @@
 @import 'base/base', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import 'layout/header', 'layout/footer', 'layout/menu', 'layout/housings';
 
 // 5. Components
-@import 'components/button', 'components/menu', 'components/header',
-  'components/footer';
+@import 'components/button', 'components/banner', 'components/housingCard';
 
 // 6. Page-specific styles
 @import 'pages/home';

@@ -1,0 +1,27 @@
+.banner {
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+  display: flex;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 223px;
+  justify-content: center;
+  overflow: hidden;
+  &__title {
+    text-align: center;
+    z-index: 2;
+  }
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('src/assets/banner-bg.png');
+    background-position: center;
+  }
+}
