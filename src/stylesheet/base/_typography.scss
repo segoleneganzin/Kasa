@@ -1,11 +1,31 @@
-/***************************** IMPORTS *****************************/
-/* google font Anton + Manrope*/
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&display=swap');
-
 /***************************** TYPOGRAPHY *****************************/
-/***************************** font */
+/***************************** general */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
 }
-/*************************************** color */
+a {
+  color: $link-color;
+}
+
+/*************************************** elements */
+.highlightText {
+  font-weight: 500;
+  font-size: 1.5rem;
+  @media screen and (max-width: 425px) {
+    font-size: 0.75rem;
+  }
+}
+
+/***************************** menu */
+.menu a {
+  @media screen and (max-width: 425px) {
+    text-transform: uppercase;
+  }
+}
+
+/***************************** footer */
+.footer {
+  color: white;
+}

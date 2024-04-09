@@ -5,24 +5,26 @@ const Menu = () => {
   const currentUrl = location.pathname;
   return (
     <nav className='menu'>
-      <ul>
-        <li>
-          <Link
-            to='/'
-            className={currentUrl === '/' ? 'menu__currentPage' : ''}
-          >
-            Accueil
-          </Link>
-        </li>
-        <li>
-          <Link
-            to='/apropos'
-            className={currentUrl === '/apropos' ? 'menu__currentPage' : ''}
-          >
-            A propos
-          </Link>
-        </li>
-      </ul>
+      <Link
+        to='/'
+        className={
+          currentUrl === '/'
+            ? 'highlightText menu__currentPage'
+            : 'highlightText'
+        }
+      >
+        Accueil
+      </Link>
+      <Link
+        to='/apropos'
+        className={
+          currentUrl === '/apropos'
+            ? 'highlightText menu__currentPage'
+            : 'highlightText'
+        }
+      >
+        A Propos
+      </Link>
     </nav>
   );
 };

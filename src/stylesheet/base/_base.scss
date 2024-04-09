@@ -1,10 +1,5 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
+/***************************** BASES *****************************/
 
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box;
 }
@@ -16,14 +11,22 @@ html {
 }
 
 /**
+ * Basic styles for main
+ */
+main {
+  margin: 50px 100px;
+  @media screen and (max-width: 425px) {
+    margin: 27px 20px;
+  }
+}
+
+/**
  * Basic styles for links
  */
-// a {
-//   color: $brand-color;
-//   text-decoration: none;
-
-//   @include on-event {
-//     color: $text-color;
-//     text-decoration: underline;
-//   }
-// }
+a {
+  text-decoration: none;
+  //   @include on-event {
+  //     color: $text-color;
+  //     text-decoration: underline;
+  //   }
+}
