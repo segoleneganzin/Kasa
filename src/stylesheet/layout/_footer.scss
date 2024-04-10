@@ -17,7 +17,7 @@
   &__text {
     padding: 0 20px;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $breakpoint-laptop) {
     padding: 66px 120px 58px;
   }
 }

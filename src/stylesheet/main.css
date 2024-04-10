@@ -27,7 +27,7 @@ body {
 main {
   margin: 50px 100px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1024px) {
   main {
     margin: 27px 20px;
   }
@@ -38,6 +38,9 @@ main {
  */
 a {
   text-decoration: none;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /***************************** TYPOGRAPHY *****************************/
@@ -81,12 +84,24 @@ a {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 3rem;
   font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .banner__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner__title {
+    font-size: 1.5rem;
+    text-shadow: none;
+  }
 }
 
 /***************************** hosting card */
 .housing-card__title {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 142%;
 }
@@ -117,13 +132,19 @@ a {
   width: 210px;
   height: 68px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1024px) {
   .header {
     margin: 20px 20px 0px;
   }
   .header__logo {
     width: 145px;
     height: 46px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header__logo {
+    width: 100px;
+    height: auto;
   }
 }
 
@@ -157,6 +178,7 @@ a {
 }
 .menu__currentPage {
   text-decoration: underline;
+  cursor: default;
 }
 @media screen and (max-width: 425px) {
   .menu {
@@ -171,8 +193,26 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 50px;
+  margin: auto;
   padding: 56px 50px;
   position: relative;
+}
+@media screen and (max-width: 1400px) {
+  .housings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .housings {
+    background-color: white;
+    grid-gap: 20px;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .housings {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .banner {
@@ -186,7 +226,6 @@ a {
   overflow: hidden;
 }
 .banner__title {
-  text-align: center;
   z-index: 2;
 }
 .banner:before {
@@ -203,9 +242,35 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 1400px) {
+  .banner {
+    margin: auto;
+    width: 830px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .banner {
+    height: 111px;
+    padding: 31px 16px;
+    width: 690px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .banner {
+    padding: 31px 110px 31px 16px;
+    width: 100%;
+  }
+  .banner__title {
+    text-align: left;
+  }
+}
 
 .housing-card {
-  align-items: flex-end;
   border-radius: 10px;
   display: flex;
   height: 340px;
@@ -213,20 +278,31 @@ a {
   overflow: hidden;
   width: 340px;
 }
+@media screen and (max-width: 1400px) {
+  .housing-card {
+    height: 255px;
+    width: 335px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .housing-card {
+    height: 255px;
+    width: 280px;
+  }
+}
 .housing-card__picture {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50%;
-     object-position: 50%;
   opacity: 0.8;
   position: absolute;
-  max-height: 340px;
+  height: 340px;
+  width: 100%;
 }
 .housing-card__title {
   bottom: 20px;
   left: 20px;
   max-width: 75%;
-  position: relative;
+  position: absolute;
   z-index: 2;
 }
 
@@ -235,4 +311,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: 43px;
+}
+@media screen and (max-width: 425px) {
+  .home {
+    gap: 22px;
+  }
 }

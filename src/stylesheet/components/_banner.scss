@@ -8,7 +8,6 @@
   justify-content: center;
   overflow: hidden;
   &__title {
-    text-align: center;
     z-index: 2;
   }
   &:before {
@@ -24,5 +23,24 @@
     background-image: url('src/assets/banner-bg.png');
     background-position: center;
     background-repeat: no-repeat;
+  }
+  @media screen and (max-width: 1400px) {
+    margin: auto;
+    width: 830px;
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    height: 111px;
+    padding: 31px 16px;
+    width: 690px;
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 70%;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 31px 110px 31px 16px;
+    width: 100%;
+    &__title {
+      text-align: left;
+    }
   }
 }
