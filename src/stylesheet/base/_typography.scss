@@ -53,3 +53,27 @@ a {
   font-weight: 700;
   line-height: 142%;
 }
+
+/***************************** collapse */
+.collapse {
+  &__title {
+    color: #fff;
+  }
+  &__content {
+    font-size: 1.125rem;
+    line-height: 142%;
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    &__title {
+      font-size: 1.125rem;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__title {
+      font-size: 0.813rem;
+    }
+    &__content {
+      font-size: 0.75rem;
+    }
+  }
+}

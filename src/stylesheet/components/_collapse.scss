@@ -1,0 +1,48 @@
+.collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 1023px;
+  &__header {
+    align-items: center;
+    background-color: $brand-color;
+    border-radius: 5px;
+    display: flex;
+    height: 52px;
+    justify-content: space-between;
+    padding: 10px 15px;
+    width: 100%;
+  }
+  &__arrow {
+    height: 32px;
+    width: 32px;
+  }
+  &__content {
+    background-color: $light-grey;
+    border-radius: 0 5px 5px 0;
+    padding: 20px;
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    width: 582px;
+    &__header {
+      padding: 10px;
+    }
+    &__arrow {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 400px;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 319px;
+    &__header {
+      height: 30px;
+    }
+    &__arrow {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/***************************** ABOUT US *****************************/
+// .about-us {
+//   gap: 38px;
+//   @media screen and (max-width: $breakpoint-mobile) {
+//     gap: 19px;
+//   }
+// }
+.about-us {
+  .collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+  }
+}

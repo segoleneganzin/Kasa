@@ -17,12 +17,24 @@
     height: 100%;
     z-index: 1;
     opacity: 0.6;
-    background-image: url('src/assets/banner-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @media screen and (max-width: $breakpoint-mobile) {
-      background-size: 175%;
+  }
+  &--home {
+    &:before {
+      background-image: url('src/assets/images/banner-home.png');
+      @media screen and (max-width: $breakpoint-mobile) {
+        background-size: 175%;
+      }
+    }
+  }
+  &--about-us {
+    &:before {
+      background-image: url('src/assets/images/banner-about-us.png');
+      @media screen and (max-width: $breakpoint-mobile) {
+        background-size: 115%;
+      }
     }
   }
   @media screen and (max-width: 1400px) {

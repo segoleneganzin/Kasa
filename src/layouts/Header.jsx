@@ -1,6 +1,6 @@
 import Menu from './Menu';
-import logoDesktop from '../assets/LOGODesktop.svg';
-import logoMobile from '../assets/LOGOMobile.svg';
+import logoDesktop from '../assets/images/LOGODesktop.svg';
+import logoMobile from '../assets/images/LOGOMobile.svg';
 
 const Header = () => {
   // manage responsive img
