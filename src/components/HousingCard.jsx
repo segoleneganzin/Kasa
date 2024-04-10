@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
 const HousingCard = ({ housingId, housings }) => {
   const filterHousing = housings.filter((housing) => housing.id == housingId);
   const housing = filterHousing[0];

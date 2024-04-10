@@ -1,5 +1,5 @@
-import Banner from '../components/Banner';
-import Housings from '../components/Housings';
+import Banner from '../layouts/Banner';
+import Housings from '../layouts/Housings';
 
 const Home = () => {
   return (
