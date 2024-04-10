@@ -3,14 +3,23 @@ import { useState } from 'react';
 
 const Collapse = ({ title, textContent }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [arrowClass, setArrowClass] = useState('collapse__arrow');
+  const [contentClass, setContentClass] = useState('collapse__content');
+
   const toggleCollapse = () => {
+    if (!isOpen) {
+      setArrowClass('collapse__arrow collapse__arrow--open');
+    } else {
+      setArrowClass('collapse__arrow collapse__arrow--close');
+    }
     setIsOpen(!isOpen);
   };
+
   return (
     <div className='collapse'>
       <div className='collapse__header'>
         <h2 className='collapse__title'>{title}</h2>
-        <span onClick={toggleCollapse} className='collapse__arrow'>
+        <span onClick={toggleCollapse} className={arrowClass}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 32 32'
@@ -23,7 +32,7 @@ const Collapse = ({ title, textContent }) => {
           </svg>
         </span>
       </div>
-      {isOpen && <p className='collapse__content'>{textContent}</p>}
+      {isOpen && <p className={contentClass}>{textContent}</p>}
     </div>
   );
 };

@@ -9,7 +9,7 @@
     grid-row-gap: 50px;
     padding: 56px 50px;
     position: relative;
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: $breakpoint-laptopXl) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: $breakpoint-laptop) {

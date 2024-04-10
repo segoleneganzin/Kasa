@@ -37,19 +37,16 @@
       }
     }
   }
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: $breakpoint-laptopXl) {
     margin: auto;
-    width: 830px;
-  }
-  @media screen and (max-width: $breakpoint-laptop) {
-    height: 111px;
-    padding: 31px 16px;
-    width: 690px;
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
     width: 70%;
   }
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding: 31px 16px;
+  }
+
   @media screen and (max-width: $breakpoint-mobile) {
+    height: 111px;
     padding: 31px 110px 31px 16px;
     width: 100%;
     &__title {

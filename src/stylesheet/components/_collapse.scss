@@ -14,15 +14,32 @@
     width: 100%;
   }
   &__arrow {
+    cursor: pointer;
     height: 32px;
     width: 32px;
+    &--open {
+      transform: rotate(180deg);
+      transition: 1s ease-in-out;
+    }
+    &--close {
+      transform: rotate(360deg);
+      transition: 1s ease-in-out;
+    }
   }
   &__content {
     background-color: $light-grey;
     border-radius: 0 5px 5px 0;
     padding: 20px;
+    &--open {
+      transform: rotate(180deg);
+      transition: 1s ease-in-out;
+    }
+    &--close {
+      transform: rotate(360deg);
+      transition: 1s ease-in-out;
+    }
   }
-  @media screen and (max-width: $breakpoint-laptop) {
+  @media screen and (max-width: $breakpoint-laptopXl) {
     width: 582px;
     &__header {
       padding: 10px;
@@ -44,5 +61,8 @@
       height: 20px;
       width: 20px;
     }
+  }
+  @media screen and (max-width: $breakpoint-mobileXs) {
+    width: 280px;
   }
 }
