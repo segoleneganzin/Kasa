@@ -6,7 +6,6 @@ const Header = () => {
   // manage responsive img
   const width = window.innerWidth;
   const mobile = width <= 425;
-  console.log(mobile);
   return (
     <header className='header'>
       <img

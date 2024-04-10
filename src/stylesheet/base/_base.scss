@@ -10,12 +10,17 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
 /**
  * Basic styles for main
  */
 main {
   margin: 50px 100px;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $breakpoint-laptop) {
     margin: 27px 20px;
   }
 }
@@ -25,6 +30,8 @@ main {
  */
 a {
   text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
   //   @include on-event {
   //     color: $text-color;
   //     text-decoration: underline;

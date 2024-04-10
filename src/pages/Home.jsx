@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import Banner from '../layouts/Banner';
+import Housings from '../layouts/Housings';
 
 const Home = () => {
   return (
-    <main>
-      <h1>Home</h1>
-      <Link to='/logement/cb02d69b'>Magnifique appartement Rivoli</Link>
+    <main className='home'>
+      <Banner />
+      <Housings />
     </main>
   );
 };
