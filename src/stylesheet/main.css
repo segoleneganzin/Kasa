@@ -16,6 +16,11 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
 /**
  * Basic styles for main
  */
@@ -163,16 +168,11 @@ a {
   background-color: #f6f6f6;
   border-radius: 25px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 50px;
   padding: 56px 50px;
   position: relative;
-}
-@media screen and (max-width: 1440px) {
-  .housings {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .banner {
@@ -201,6 +201,7 @@ a {
   opacity: 0.6;
   background-image: url("src/assets/banner-bg.png");
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .housing-card {
