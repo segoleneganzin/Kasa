@@ -1,7 +1,10 @@
 .collapse {
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 0px;
+  overflow: hidden;
+  transition: height 1s ease-in;
   width: 1023px;
   &__header {
     align-items: center;
@@ -12,31 +15,47 @@
     justify-content: space-between;
     padding: 10px 15px;
     width: 100%;
+    z-index: 2;
   }
   &__arrow {
     cursor: pointer;
     height: 32px;
     width: 32px;
     &--open {
-      transform: rotate(180deg);
-      transition: 1s ease-in-out;
+      transform: rotate(-180deg);
+      transition: 1s ease-in;
     }
     &--close {
-      transform: rotate(360deg);
-      transition: 1s ease-in-out;
+      transform: rotate(0deg);
+      transition: 1s ease-out;
     }
   }
   &__content {
-    background-color: $light-grey;
-    border-radius: 0 5px 5px 0;
-    padding: 20px;
-    &--open {
-      transform: rotate(180deg);
-      transition: 1s ease-in-out;
+    &-container {
+      background-color: $light-grey;
+      border-radius: 5px;
+      transform: translateY(-100%);
+      padding: 20px;
+      transform-origin: top;
+      &--open {
+        transform: translateY(0px);
+        transition: 1s ease-in;
+      }
+      &--close {
+        transform: translateY(-100%);
+        transition: 1s 0.3s ease-out;
+      }
     }
-    &--close {
-      transform: rotate(360deg);
-      transition: 1s ease-in-out;
+    &-text {
+      transform: translateY(-100%);
+      &--open {
+        transform: translateY(0px);
+        transition: 1s 0.3s ease-in-out;
+      }
+      &--close {
+        transform: translateY(-100%);
+        transition: 1s ease-in-out;
+      }
     }
   }
   @media screen and (max-width: $breakpoint-laptopXl) {

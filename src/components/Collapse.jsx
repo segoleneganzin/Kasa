@@ -1,25 +1,49 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Collapse = ({ title, textContent }) => {
+  const width = window.innerWidth;
+  const mobile = width <= 425;
   const [isOpen, setIsOpen] = useState(false);
-  const [arrowClass, setArrowClass] = useState('collapse__arrow');
-  const [contentClass, setContentClass] = useState('collapse__content');
+  const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px');
+  const [arrowClass, setArrowClass] = useState('');
+  const [contentContainerClass, setContentContainerClass] = useState('');
+  const [contentTextClass, setContentTextClass] = useState('');
+
+  const heightRef = useRef();
+
+  useEffect(() => {
+    if (isOpen) {
+      setContentHeight(`${heightRef.current.scrollHeight}px`);
+      setArrowClass('collapse__arrow--open');
+      setContentContainerClass('collapse__content-container--open');
+      setContentTextClass('collapse__content-text--open');
+    } else {
+      setContentHeight(mobile ? '30px' : '52px');
+      setArrowClass('collapse__arrow--close');
+      setContentTextClass('collapse__content-text--close');
+      setContentContainerClass('collapse__content-container--close');
+    }
+  }, [isOpen, mobile]);
 
   const toggleCollapse = () => {
-    if (!isOpen) {
-      setArrowClass('collapse__arrow collapse__arrow--open');
-    } else {
-      setArrowClass('collapse__arrow collapse__arrow--close');
-    }
     setIsOpen(!isOpen);
   };
+  // console.log(contentHeight);
+  // console.log(heightRef.current.scrollHeight);
 
   return (
-    <div className='collapse'>
+    <div
+      className='collapse'
+      ref={heightRef}
+      style={{ height: `${contentHeight}` }}
+    >
       <div className='collapse__header'>
         <h2 className='collapse__title'>{title}</h2>
-        <span onClick={toggleCollapse} className={arrowClass}>
+        <span
+          onClick={toggleCollapse}
+          className={arrowClass + ' collapse__arrow'}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 32 32'
@@ -32,7 +56,12 @@ const Collapse = ({ title, textContent }) => {
           </svg>
         </span>
       </div>
-      {isOpen && <p className={contentClass}>{textContent}</p>}
+      {/* only visible when isOpen */}
+      <div className={contentContainerClass + ' collapse__content-container'}>
+        <p className={contentTextClass + ' collapse__content-text'}>
+          {textContent}
+        </p>
+      </div>
     </div>
   );
 };

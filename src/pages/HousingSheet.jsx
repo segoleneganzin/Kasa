@@ -4,7 +4,7 @@ const HousingSheet = () => {
   const { housingId } = useParams();
   let filteredHousing;
   const { data, isLoading, error } = useFetch(
-    window.location.origin + `/src/assets/housingsAds.json`
+    window.location.origin + `/src/assets/datas/housingsAds.json`
   );
   if (!isLoading) {
     filteredHousing = data.find((housing) => housing.id === housingId);

@@ -1,4 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../api/useFetch';
 import HousingCard from '../components/HousingCard';
 import Loader from '../components/Loader';
@@ -6,13 +5,9 @@ import Loader from '../components/Loader';
 const Housings = () => {
   // TODO sessionStorage ?
   const { data, isLoading, error } = useFetch(
-    window.location.origin + `/src/assets/housingsAds.json`
+    window.location.origin + `/src/assets/datas/housingsAds.json`
   );
-  console.log(isLoading);
-  //   const navigate = useNavigate();
-  //   if (error) {
-  //     navigate('*')
-  // }
+  // console.log(isLoading);
 
   return (
     <section className='housings'>

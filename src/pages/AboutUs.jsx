@@ -1,5 +1,5 @@
 import Banner from '../components/Banner';
-import { aboutUsList } from '../assets/aboutUsList';
+import { aboutUsList } from '../assets/datas/aboutUsList';
 import Collapse from '../components/Collapse';
 const AboutUs = () => {
   return (
