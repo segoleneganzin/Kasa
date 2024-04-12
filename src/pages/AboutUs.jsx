@@ -1,9 +1,20 @@
-import PageLayout from '../layouts/PageLayout';
+import Banner from '../components/Banner';
+import { aboutUsList } from '../assets/datas/aboutUsList';
+import Collapse from '../components/Collapse';
 const AboutUs = () => {
   return (
-    <PageLayout currentPage={'AboutUs'}>
-      <h1>A propos</h1>
-    </PageLayout>
+    <main className='about-us'>
+      <Banner page={'about-us'} />
+      <section className='collapses'>
+        {aboutUsList.map((item) => (
+          <Collapse
+            title={item.title}
+            textContent={item.content}
+            key={item.title}
+          />
+        ))}
+      </section>
+    </main>
   );
 };
 

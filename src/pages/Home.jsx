@@ -1,12 +1,12 @@
-import PageLayout from '../layouts/PageLayout';
-import { Link } from 'react-router-dom';
+import Banner from '../components/Banner';
+import Housings from '../layouts/Housings';
 
 const Home = () => {
   return (
-    <PageLayout currentPage={'Home'}>
-      <h1>Home</h1>
-      <Link to='/logement/cb02d69b'>Magnifique appartement Rivoli</Link>
-    </PageLayout>
+    <main className='home'>
+      <Banner title={'Chez vous, partout et ailleurs'} page={'home'} />
+      <Housings />
+    </main>
   );
 };
 

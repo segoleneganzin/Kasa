@@ -1,10 +1,5 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
+/***************************** BASES *****************************/
 
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box;
 }
@@ -15,15 +10,36 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+/**
+ * Basic styles for main
+ */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  margin: 50px 100px;
+  @media screen and (max-width: $breakpoint-laptop) {
+    margin: 27px 20px;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 22px;
+  }
+}
+
 /**
  * Basic styles for links
  */
-// a {
-//   color: $brand-color;
-//   text-decoration: none;
-
-//   @include on-event {
-//     color: $text-color;
-//     text-decoration: underline;
-//   }
-// }
+a {
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  //   @include on-event {
+  //     color: $text-color;
+  //     text-decoration: underline;
+  //   }
+}

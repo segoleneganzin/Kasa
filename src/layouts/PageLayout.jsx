@@ -2,17 +2,16 @@ import PropTypes from 'prop-types';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-const PageLayout = ({ children, currentPage }) => {
+const PageLayout = ({ children }) => {
   return (
     <div>
-      <Header currentPage={currentPage} />
-      <main>{children}</main>
+      <Header />
+      {children}
       <Footer />
     </div>
   );
 };
 PageLayout.propTypes = {
   children: PropTypes.element.isRequired,
-  currentPage: PropTypes.string,
 };
 export default PageLayout;

@@ -1,11 +1,79 @@
-/***************************** IMPORTS *****************************/
-/* google font Anton + Manrope*/
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&display=swap');
-
 /***************************** TYPOGRAPHY *****************************/
-/***************************** font */
+/***************************** general */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
 }
-/*************************************** color */
+a {
+  color: $link-color;
+}
+
+/*************************************** elements */
+.highlightText {
+  font-weight: 500;
+  font-size: 1.5rem;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 0.75rem;
+  }
+}
+
+/***************************** menu */
+.menu a {
+  @media screen and (max-width: $breakpoint-mobile) {
+    text-transform: uppercase;
+  }
+}
+
+/***************************** footer */
+.footer {
+  color: white;
+}
+
+/***************************** banner */
+.banner__title {
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  @media screen and (max-width: $breakpoint-laptop) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    font-size: 1.5rem;
+    text-shadow: none;
+  }
+}
+
+/***************************** hosting card */
+.housing-card__title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 142%;
+}
+
+/***************************** collapse */
+.collapse {
+  &__title {
+    color: #fff;
+  }
+  &__content {
+    font-size: 1.125rem;
+    line-height: 142%;
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    &__title {
+      font-size: 1.125rem;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__title {
+      font-size: 0.813rem;
+    }
+    &__content {
+      font-size: 0.75rem;
+    }
+  }
+}

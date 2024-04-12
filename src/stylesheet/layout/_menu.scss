@@ -1,0 +1,13 @@
+/***************************** MENU *****************************/
+
+.menu {
+  display: flex;
+  gap: 57px;
+  &__currentPage {
+    text-decoration: underline;
+    cursor: default;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 26px;
+  }
+}

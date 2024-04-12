@@ -1,0 +1,29 @@
+.housing-card {
+  border-radius: 10px;
+  display: flex;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  width: 340px;
+  @media screen and (max-width: $breakpoint-laptopXl) {
+    height: 255px;
+    width: 335px;
+  }
+  @media screen and (max-width: $breakpoint-mobileXs) {
+    width: 280px;
+  }
+  &__picture {
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute;
+    height: 340px;
+    width: 100%;
+  }
+  &__title {
+    bottom: 20px;
+    left: 20px;
+    max-width: 75%;
+    position: absolute;
+    z-index: 2;
+  }
+}
