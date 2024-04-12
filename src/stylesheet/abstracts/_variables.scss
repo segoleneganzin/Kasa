@@ -14,12 +14,17 @@ $link-color: #000000;
 /// @type Color
 $brand-color: #ff6060;
 
+/// grey
+/// @type Color
+$grey: #f6f6f6;
+
 /// Light grey
 /// @type Color
-$light-grey: #f6f6f6;
+$light-grey: #fbfbfb;
 
 /// *********************** BREAKPOINTS
 $breakpoint-mobileXs: 360px;
 $breakpoint-mobile: 425px;
 $breakpoint-tablet: 768px;
 $breakpoint-laptop: 1024px;
+$breakpoint-laptopXl: 1400px;

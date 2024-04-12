@@ -16,28 +16,37 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
-    background-image: url('src/assets/banner-bg.png');
+    opacity: 0.4;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @media screen and (max-width: $breakpoint-mobile) {
-      background-size: 175%;
+  }
+  &--home {
+    &:before {
+      background-image: url('src/assets/images/banner-home.png');
+      @media screen and (max-width: $breakpoint-mobile) {
+        background-size: 175%;
+      }
     }
   }
-  @media screen and (max-width: 1400px) {
+  &--about-us {
+    &:before {
+      background-image: url('src/assets/images/banner-about-us.png');
+      @media screen and (max-width: $breakpoint-mobile) {
+        background-size: 115%;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-laptopXl) {
     margin: auto;
-    width: 830px;
-  }
-  @media screen and (max-width: $breakpoint-laptop) {
-    height: 111px;
-    padding: 31px 16px;
-    width: 690px;
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
     width: 70%;
   }
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding: 31px 16px;
+  }
+
   @media screen and (max-width: $breakpoint-mobile) {
+    height: 111px;
     padding: 31px 110px 31px 16px;
     width: 100%;
     &__title {

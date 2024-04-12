@@ -1,16 +1,15 @@
 .housings {
-  background-color: $light-grey;
+  background-color: $grey;
   border-radius: 25px;
+  margin: auto;
   &__cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 60px;
     grid-row-gap: 50px;
-    margin: auto;
-    min-height: 42vh;
     padding: 56px 50px;
     position: relative;
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: $breakpoint-laptopXl) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: $breakpoint-laptop) {

@@ -19,9 +19,15 @@ body {
  * Basic styles for main
  */
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
   margin: 50px 100px;
   @media screen and (max-width: $breakpoint-laptop) {
     margin: 27px 20px;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 22px;
   }
 }
 

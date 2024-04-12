@@ -5,12 +5,11 @@
   position: relative;
   overflow: hidden;
   width: 340px;
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: $breakpoint-laptopXl) {
     height: 255px;
     width: 335px;
   }
   @media screen and (max-width: $breakpoint-mobileXs) {
-    height: 255px;
     width: 280px;
   }
   &__picture {
