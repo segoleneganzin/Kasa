@@ -1,0 +1,14 @@
+.host {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  &__name {
+    text-align: right;
+    //   overflow-wrap: break-word;
+  }
+  &__picture {
+    border-radius: 100%;
+    height: 64px;
+    width: 64px;
+  }
+}

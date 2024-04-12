@@ -5,8 +5,19 @@
     flex-direction: column;
     gap: 30px;
     margin: auto;
+    width: 1023px;
+    @media screen and (max-width: $breakpoint-laptopXl) {
+      width: 582px;
+    }
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 400px;
+    }
     @media screen and (max-width: $breakpoint-mobile) {
       gap: 20px;
+      width: 319px;
+    }
+    @media screen and (max-width: $breakpoint-mobileXs) {
+      width: 280px;
     }
   }
 }

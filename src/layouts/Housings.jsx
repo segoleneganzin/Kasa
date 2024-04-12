@@ -7,7 +7,6 @@ const Housings = () => {
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`
   );
-  // console.log(isLoading);
 
   return (
     <section className='housings'>

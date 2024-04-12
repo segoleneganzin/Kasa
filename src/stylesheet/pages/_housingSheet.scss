@@ -1,3 +1,30 @@
 .housing-sheet {
-  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 55vh; // for loader
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    &-titles-tags {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-host-rate {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      @media screen and (max-width: $breakpoint-laptopXl) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    @media screen and (max-width: $breakpoint-laptopXl) {
+      flex-direction: column;
+    }
+  }
 }

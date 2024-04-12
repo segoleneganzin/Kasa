@@ -6,7 +6,7 @@
   gap: 0px;
   overflow: hidden;
   transition: height 1s ease-in;
-  width: 1023px;
+  width: 100%;
   &__header {
     align-items: center;
     background-color: $brand-color;
@@ -51,20 +51,17 @@
         transition: 1s 0.3s ease-out;
       }
     }
-    &-text {
+    transform: translateY(-100%);
+    &--open {
+      transform: translateY(0px);
+      transition: 1s 0.3s ease-in-out;
+    }
+    &--close {
       transform: translateY(-100%);
-      &--open {
-        transform: translateY(0px);
-        transition: 1s 0.3s ease-in-out;
-      }
-      &--close {
-        transform: translateY(-100%);
-        transition: 1s ease-in-out;
-      }
+      transition: 1s ease-in-out;
     }
   }
   @media screen and (max-width: $breakpoint-laptopXl) {
-    width: 582px;
     &__header {
       padding: 10px;
     }
@@ -74,10 +71,8 @@
     }
   }
   @media screen and (max-width: $breakpoint-tablet) {
-    width: 400px;
   }
   @media screen and (max-width: $breakpoint-mobile) {
-    width: 319px;
     &__header {
       height: 30px;
     }
@@ -85,8 +80,5 @@
       height: 20px;
       width: 20px;
     }
-  }
-  @media screen and (max-width: $breakpoint-mobileXs) {
-    width: 280px;
   }
 }
