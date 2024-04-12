@@ -77,3 +77,39 @@ a {
     }
   }
 }
+
+/***************************** error page */
+.error-page {
+  &__type {
+    color: $brand-color;
+    font-size: 18rem;
+  }
+  &__message {
+    color: $brand-color;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 142%;
+  }
+  &__link {
+    font-size: 1.125rem;
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    &__type {
+      font-size: 10rem;
+    }
+    &__message {
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__type {
+      font-size: 6rem;
+    }
+    &__message {
+      font-size: 1.125rem;
+    }
+    &__link {
+      font-size: 0.875rem;
+    }
+  }
+}
