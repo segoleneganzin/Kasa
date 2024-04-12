@@ -6,7 +6,7 @@ const HousingCard = ({ housingId, housings }) => {
   const filterHousing = housings.filter((housing) => housing.id == housingId);
   const housing = filterHousing[0];
   const housingPicture = housing.cover;
-  // manage responsive img
+  // manage responsive html height/width of img
   const width = window.innerWidth;
   const laptopXL = width <= 1400;
   const mobileXS = width <= 425;

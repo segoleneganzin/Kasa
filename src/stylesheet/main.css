@@ -441,15 +441,19 @@ a {
 .collapse__content-container {
   background-color: #fbfbfb;
   border-radius: 5px;
-  transform: translateY(-100%);
+  opacity: 0;
   padding: 20px;
+  transform: translateY(-100%);
   transform-origin: top;
+  transition: opacity 0.3s ease-in-out;
 }
 .collapse__content-container--open {
+  opacity: 1;
   transform: translateY(0px);
   transition: 1s ease-in;
 }
 .collapse__content-container--close {
+  opacity: 0;
   transform: translateY(-100%);
   transition: 1s 0.3s ease-out;
 }
@@ -506,4 +510,9 @@ a {
   flex-direction: column;
   gap: 30px;
   margin: auto;
+}
+@media screen and (max-width: 425px) {
+  .about-us .collapses {
+    gap: 20px;
+  }
 }

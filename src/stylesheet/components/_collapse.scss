@@ -34,14 +34,18 @@
     &-container {
       background-color: $light-grey;
       border-radius: 5px;
-      transform: translateY(-100%);
+      opacity: 0;
       padding: 20px;
+      transform: translateY(-100%);
       transform-origin: top;
+      transition: opacity 0.3s ease-in-out;
       &--open {
+        opacity: 1;
         transform: translateY(0px);
         transition: 1s ease-in;
       }
       &--close {
+        opacity: 0;
         transform: translateY(-100%);
         transition: 1s 0.3s ease-out;
       }

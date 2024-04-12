@@ -11,5 +11,8 @@
     flex-direction: column;
     gap: 30px;
     margin: auto;
+    @media screen and (max-width: $breakpoint-mobile) {
+      gap: 20px;
+    }
   }
 }

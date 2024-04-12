@@ -6,31 +6,32 @@ const Collapse = ({ title, textContent }) => {
   const mobile = width <= 425;
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px');
-  const [arrowClass, setArrowClass] = useState('');
-  const [contentContainerClass, setContentContainerClass] = useState('');
-  const [contentTextClass, setContentTextClass] = useState('');
+  const [classNames, setClassNames] = useState({
+    arrow: '',
+    contentContainer: '',
+    contentText: '',
+  });
 
   const heightRef = useRef();
 
   useEffect(() => {
-    if (isOpen) {
-      setContentHeight(`${heightRef.current.scrollHeight}px`);
-      setArrowClass('collapse__arrow--open');
-      setContentContainerClass('collapse__content-container--open');
-      setContentTextClass('collapse__content-text--open');
-    } else {
-      setContentHeight(mobile ? '30px' : '52px');
-      setArrowClass('collapse__arrow--close');
-      setContentTextClass('collapse__content-text--close');
-      setContentContainerClass('collapse__content-container--close');
-    }
+    setContentHeight(
+      isOpen ? `${heightRef.current.scrollHeight}px` : mobile ? '30px' : '52px'
+    );
+    setClassNames({
+      arrow: isOpen ? 'collapse__arrow--open' : 'collapse__arrow--close',
+      contentContainer: isOpen
+        ? 'collapse__content-container--open'
+        : 'collapse__content-container--close',
+      contentText: isOpen
+        ? 'collapse__content-text--open'
+        : 'collapse__content-text--close',
+    });
   }, [isOpen, mobile]);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
-  // console.log(contentHeight);
-  // console.log(heightRef.current.scrollHeight);
 
   return (
     <div
@@ -42,7 +43,7 @@ const Collapse = ({ title, textContent }) => {
         <h2 className='collapse__title'>{title}</h2>
         <span
           onClick={toggleCollapse}
-          className={arrowClass + ' collapse__arrow'}
+          className={classNames.arrow + ' collapse__arrow'}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -57,8 +58,10 @@ const Collapse = ({ title, textContent }) => {
         </span>
       </div>
       {/* only visible when isOpen */}
-      <div className={contentContainerClass + ' collapse__content-container'}>
-        <p className={contentTextClass + ' collapse__content-text'}>
+      <div
+        className={classNames.contentContainer + ' collapse__content-container'}
+      >
+        <p className={classNames.contentText + ' collapse__content-text'}>
           {textContent}
         </p>
       </div>
