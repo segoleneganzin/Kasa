@@ -1,7 +1,9 @@
 import { useFetch } from '../api/useFetch';
 import { useParams } from 'react-router-dom';
+import Loader from '../components/Loader';
 const HousingSheet = () => {
   const { housingId } = useParams();
+  // TODO sessionStorage ?
   let filteredHousing;
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`
@@ -11,9 +13,9 @@ const HousingSheet = () => {
   }
 
   return (
-    <main>
+    <main className='housing-sheet'>
       {error && 'Il y a eu un problème'}
-      {isLoading && 'loader'}
+      {isLoading && <Loader />}
       {!isLoading &&
         !error &&
         (filteredHousing ? (
@@ -23,7 +25,6 @@ const HousingSheet = () => {
         ))}
     </main>
   );
-  // return <main>{/* <h1>{housing.title}</h1> */}</main>;
 };
 
 export default HousingSheet;
