@@ -2,9 +2,18 @@ import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
 import { mobile } from '../utils/reusableConst';
 
+/**
+ * @component
+ * @param {Object} props
+ * @param {string} props.title
+ * @param {string} props.textContent
+ * @param {string[]} props.listContent
+ * @returns {JSX.Element}
+ */
 const Collapse = ({ title, textContent, listContent }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px');
+  const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px'); // manage height for smooth open close
+  // manage open close element className for transition
   const [classNames, setClassNames] = useState({
     arrow: '',
     contentContainer: '',
@@ -13,6 +22,7 @@ const Collapse = ({ title, textContent, listContent }) => {
 
   const heightRef = useRef();
 
+  // if content is a list, like for housing equipments
   let listContentFormated;
   if (listContent) {
     listContentFormated = listContent.map((item, index) => (
@@ -31,7 +41,7 @@ const Collapse = ({ title, textContent, listContent }) => {
         : 'collapse__content-container--close',
       content: isOpen ? 'collapse__content--open' : 'collapse__content--close',
     });
-  }, [isOpen, mobile]);
+  }, [isOpen]);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);

@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 
+/**
+ * @component
+ * @param {Object} props
+ * @param {number} props.rateLevel
+ * @returns {JSX.Element}
+ */
 const Rate = ({ rateLevel }) => {
   const stars = [];
+  // 5-star rating
+  // if i is smaller than the housing rating, then the star is orange, otherwise it is grey
   for (let i = 0; i < 5; i++) {
     if (i < rateLevel) {
       stars.push(

@@ -10,21 +10,26 @@ import HousingSheetTitles from '../layouts/HousingSheetTitles';
 import SlideShow from '../components/SlideShow';
 
 const HousingSheet = () => {
-  const { housingId } = useParams();
+  const { housingId } = useParams(); // get id from url
   // TODO sessionStorage ?
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // manage redirection in case of unknown housingId
+
   let filteredHousing;
+
+  // get housings from json file
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`
   );
+  // get housing by id
   if (!isLoading) {
     filteredHousing = data.find((housing) => housing.id === housingId);
   }
 
   // execute after render to wait for all the information needed
   useEffect(() => {
+    // if id doesn't match with any housing, redirecting to 404 error page
     if (!isLoading && !filteredHousing) {
-      navigate('/erreur');
+      navigate('/erreur404');
     }
   }, [isLoading, filteredHousing, navigate]);
 

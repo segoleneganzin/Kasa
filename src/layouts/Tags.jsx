@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import Tag from '../components/Tag';
 
+/**
+ * Layout to display tags into housingSheet page
+ * @param {Object} props
+ * @param {string[]} props.tags
+ * @returns {JSX.Element}
+ */
 const Tags = ({ tags }) => {
   return (
     <div className='tags'>

@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types';
 import { mobile, tablet } from '../utils/reusableConst';
 
+/**
+ * @component
+ * @param {Object} props
+ * @param {string} props.hostName
+ * @param {string} props.hostPicture
+ * @returns {JSX.Element}
+ */
 const Host = ({ hostName, hostPicture }) => {
   return (
     <div className='host'>

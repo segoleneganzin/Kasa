@@ -2,17 +2,23 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { mobileXs, laptopXl } from '../utils/reusableConst';
 
+/**
+ * avoid call backend by passed housings list into props
+ * @component
+ * @param {Object} props
+ * @param {string} props.housingId
+ * @param {object[]} props.housings
+ * @returns {JSX.Element}
+ */
 const HousingCard = ({ housingId, housings }) => {
-  // avoid call backend by passed housings list into props
-  const filterHousing = housings.filter((housing) => housing.id == housingId);
+  const filterHousing = housings.filter((housing) => housing.id == housingId); // get housing by id
   const housing = filterHousing[0];
-  const housingPicture = housing.cover;
   return (
     <Link to={`/logement/${housingId}`}>
       <article className='housing-card'>
         <img
-          src={housingPicture}
-          alt=''
+          src={housing.cover}
+          alt={`Aperçu de ${housing.title}`}
           className='housing-card__picture'
           height={laptopXl ? 255 : 340}
           width={mobileXs ? 280 : 340}
@@ -24,6 +30,6 @@ const HousingCard = ({ housingId, housings }) => {
 };
 HousingCard.propTypes = {
   housingId: PropTypes.string.isRequired,
-  housings: PropTypes.array.isRequired,
+  housings: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 export default HousingCard;

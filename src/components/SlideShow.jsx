@@ -2,6 +2,13 @@ import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 import { mobile, tablet, laptop } from '../utils/reusableConst';
 
+/**
+ * @component
+ * @param {Object} props
+ * @param {string[]} props.pictures
+ * @param {string} props.title
+ * @returns {JSX.Element}
+ */
 const SlideShow = ({ pictures, title }) => {
   const previousCarouselPicture = useRef();
   const nextCarouselPicture = useRef();
@@ -28,6 +35,7 @@ const SlideShow = ({ pictures, title }) => {
 
   return (
     <div className='slideshow'>
+      {/* only visible if there are more than 1 picture */}
       {pictures.length > 1 && (
         <div className='slideshow__arrows'>
           <a
@@ -88,6 +96,7 @@ const SlideShow = ({ pictures, title }) => {
           tabIndex={0}
         />
       </div>
+      {/* only visible on screen over 425px and if there are more than 1 picture*/}
       {pictures.length > 1 && !mobile ? (
         <p className='slideshow__picture-index'>
           {pictures.indexOf(currentPicture) + 1}/{pictures.length}

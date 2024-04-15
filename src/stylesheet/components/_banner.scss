@@ -30,7 +30,7 @@
   }
   &--home {
     &:before {
-      background-image: url('src/assets/images/banner-home.png');
+      background-image: url('src/assets/images/banner-home.webp');
       @media screen and (max-width: $breakpoint-mobile) {
         background-size: 175%;
       }
@@ -38,7 +38,7 @@
   }
   &--about-us {
     &:before {
-      background-image: url('src/assets/images/banner-about-us.png');
+      background-image: url('src/assets/images/banner-about-us.webp');
       @media screen and (max-width: $breakpoint-mobile) {
         background-size: 115%;
       }

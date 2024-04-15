@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Error404 from './pages/Error404';
+import ErrorPage from './pages/ErrorPage';
 import AboutUs from './pages/AboutUs';
 import HousingSheet from './pages/HousingSheet';
 
@@ -12,8 +12,24 @@ const Router = () => {
       <Route path='/apropos' element={<AboutUs />} />
       <Route path='/logement/:housingId' element={<HousingSheet />} />
       {/* NotFound */}
-      <Route path='/erreur' element={<Error404 />} />
-      <Route path='*' element={<Error404 />} />
+      <Route
+        path='/erreur404'
+        element={
+          <ErrorPage
+            errorType={'404'}
+            errorMessage={`Oups! La page que vous demandez n'existe pas.`}
+          />
+        }
+      />
+      <Route
+        path='*'
+        element={
+          <ErrorPage
+            errorType={'404'}
+            errorMessage={`Oups! La page que vous demandez n'existe pas.`}
+          />
+        }
+      />
     </Routes>
   );
 };
