@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
+import { mobile } from '../utils/reusableConst';
 
 const Collapse = ({ title, textContent, listContent }) => {
-  const width = window.innerWidth;
-  const mobile = width <= 425;
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px');
   const [classNames, setClassNames] = useState({
@@ -11,10 +10,10 @@ const Collapse = ({ title, textContent, listContent }) => {
     contentContainer: '',
     content: '',
   });
-  let listContentFormated;
 
   const heightRef = useRef();
 
+  let listContentFormated;
   if (listContent) {
     listContentFormated = listContent.map((item, index) => (
       <li key={index}>{item}</li>

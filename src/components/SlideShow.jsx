@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
+import { mobile, tablet, laptop } from '../utils/reusableConst';
 
 const SlideShow = ({ pictures, title }) => {
   const previousCarouselPicture = useRef();
   const nextCarouselPicture = useRef();
   const [currentPicture, setCurrentPicture] = useState(pictures[0]);
-  const mobile = window.innerWidth <= 425;
 
   /**
    * manage picture to display depends of its index
@@ -83,8 +83,8 @@ const SlideShow = ({ pictures, title }) => {
           alt={`${title}, photo ${pictures.indexOf(currentPicture) + 1} sur ${
             pictures.length
           }`}
-          height={400}
-          width={300}
+          height={tablet ? 255 : 415}
+          width={laptop ? window.innerWidth - 40 : window.innerWidth - 200}
           tabIndex={0}
         />
       </div>
