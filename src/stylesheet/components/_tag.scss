@@ -3,7 +3,7 @@
   border-radius: 10px;
   padding: 3px 30px;
   white-space: nowrap;
-  @media screen and (max-width: $breakpoint-tablet) {
+  @include tablet {
     border-radius: 5px;
     height: 20px;
     padding: 3px 10px;

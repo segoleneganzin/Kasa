@@ -5,17 +5,17 @@
   flex-direction: column;
   gap: 139px;
   margin: 139px 50px;
+  @include mobile {
+    gap: 113px;
+    margin: 113px 50px;
+  }
   &__message {
     text-align: center;
+    @include mobile {
+      padding: 0 37px;
+    }
   }
   &__link {
     text-decoration: underline;
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
-    gap: 113px;
-    margin: 113px 50px;
-    &__message {
-      padding: 0 37px;
-    }
   }
 }

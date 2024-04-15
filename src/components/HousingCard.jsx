@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { mobileXs, laptopXl } from '../utils/reusableConst';
+import { mobileXS, laptopXL } from '../utils/reusableConst';
 
 /**
  * avoid call backend by passed housings list into props
@@ -20,8 +20,8 @@ const HousingCard = ({ housingId, housings }) => {
           src={housing.cover}
           alt={`Aperçu de ${housing.title}`}
           className='housing-card__picture'
-          height={laptopXl ? 255 : 340}
-          width={mobileXs ? 280 : 340}
+          height={laptopXL ? 255 : 340}
+          width={mobileXS ? 280 : 340}
         />
         <h2 className='housing-card__title'>{housing.title}</h2>
       </article>

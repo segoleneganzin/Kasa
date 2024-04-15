@@ -3,14 +3,14 @@
 .menu {
   display: flex;
   gap: 57px;
+  @include mobile {
+    gap: 26px;
+  }
   &__currentPage {
     cursor: default;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
     text-decoration-skip-ink: none;
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
-    gap: 26px;
   }
 }

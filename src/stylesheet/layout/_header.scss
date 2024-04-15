@@ -5,21 +5,17 @@
   display: flex;
   justify-content: space-between;
   margin: 45px 100px 0px;
+  @include laptop {
+    margin: 20px 20px 0px;
+  }
   &__logo {
     width: 210px;
-    height: 68px;
-  }
-  @media screen and (max-width: $breakpoint-laptop) {
-    margin: 20px 20px 0px;
-    &__logo {
+    height: auto;
+    @include laptop {
       width: 145px;
-      height: 46px;
     }
-  }
-  @media screen and (max-width: $breakpoint-mobileXs) {
-    &__logo {
+    @include mobileXS {
       width: 100px;
-      height: auto;
     }
   }
 }

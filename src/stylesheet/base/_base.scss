@@ -28,10 +28,10 @@ main {
     text-underline-offset: 3px;
     text-decoration-skip-ink: none;
   }
-  @media screen and (max-width: $breakpoint-laptop) {
+  @include laptop {
     margin: 27px 20px;
   }
-  @media screen and (max-width: $breakpoint-mobile) {
+  @include mobile {
     gap: 22px;
   }
 }

@@ -9,13 +9,13 @@
   padding: 66px 464px 29px;
   text-align: center;
   width: 100%;
+  @include laptop {
+    padding: 66px 120px 58px;
+  }
   &__logo {
     width: 122px;
   }
   &__text {
     padding: 0 20px;
-  }
-  @media screen and (max-width: $breakpoint-laptop) {
-    padding: 66px 120px 58px;
   }
 }

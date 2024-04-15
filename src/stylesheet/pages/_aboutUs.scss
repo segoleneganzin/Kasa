@@ -6,17 +6,17 @@
     gap: 30px;
     margin: auto;
     width: 1023px;
-    @media screen and (max-width: $breakpoint-laptopXl) {
+    @include laptopXL {
       width: 582px;
     }
-    @media screen and (max-width: $breakpoint-tablet) {
+    @include tablet {
       width: 400px;
     }
-    @media screen and (max-width: $breakpoint-mobile) {
+    @include mobile {
       gap: 20px;
       width: 319px;
     }
-    @media screen and (max-width: $breakpoint-mobileXs) {
+    @include mobileXS {
       width: 280px;
     }
   }

@@ -1,7 +1,7 @@
 .housing-sheet__titles {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: $breakpoint-laptopXl) {
+  @include laptopXL {
     gap: 5px;
   }
 }

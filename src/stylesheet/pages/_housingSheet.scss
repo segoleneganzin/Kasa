@@ -3,37 +3,37 @@
   flex-direction: column;
   gap: 24px;
   min-height: 55vh; // for loader
+  @include tablet {
+    gap: 10px;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+    @include laptopXL {
+      flex-direction: column;
+      gap: 16px;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
     &-titles-tags {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      @include tablet {
+        gap: 10px;
+      }
     }
     &-host-rate {
       align-items: flex-end;
       display: flex;
       flex-direction: column;
       gap: 21px;
-    }
-    @media screen and (max-width: $breakpoint-laptopXl) {
-      flex-direction: column;
-      gap: 16px;
-      &-host-rate {
+      @include laptopXL {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-      }
-    }
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
-    gap: 10px;
-    &__header {
-      margin-top: 0;
-      &-titles-tags {
-        gap: 10px;
       }
     }
   }

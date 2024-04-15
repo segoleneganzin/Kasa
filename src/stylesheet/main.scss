@@ -14,11 +14,11 @@
   'layout/tags', 'layout/housingSheetDetails';
 
 // 5. Components
-@import 'components/button', 'components/housingCard', 'components/loader',
-  'components/banner', 'components/collapse', 'components/tag',
-  'components/host', 'components/rate', 'components/slideShow';
+@import 'components/housingCard', 'components/loader', 'components/banner',
+  'components/collapse', 'components/tag', 'components/host', 'components/rate',
+  'components/slideShow';
 
 // 6. Page-specific styles
-@import 'pages/home', 'pages/aboutUs', 'pages/error404', 'pages/housingSheet';
+@import 'pages/home', 'pages/aboutUs', 'pages/errorPage', 'pages/housingSheet';
 
 // 7. Themes

@@ -11,7 +11,7 @@ const Router = () => {
       <Route index element={<Home />} />
       <Route path='/apropos' element={<AboutUs />} />
       <Route path='/logement/:housingId' element={<HousingSheet />} />
-      {/* NotFound */}
+      {/* NotFound - error 'caught' by code - can be managed by navigate */}
       <Route
         path='/erreur404'
         element={
@@ -21,6 +21,7 @@ const Router = () => {
           />
         }
       />
+      {/* NotFound - error 'uncaught' by code - unpredictable */}
       <Route
         path='*'
         element={

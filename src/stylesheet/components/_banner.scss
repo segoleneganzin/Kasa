@@ -8,14 +8,30 @@
   height: 223px;
   justify-content: center;
   overflow: hidden;
+  @include laptopXL {
+    margin: auto;
+    width: 70%;
+  }
+  @include tablet {
+    border-radius: 10px;
+    height: 111px;
+  }
+  @include mobile {
+    width: 100%;
+  }
   &__title {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     height: 100%;
+    text-align: center;
     width: 100%;
     z-index: 2;
+    @include mobile {
+      padding: 31px 110px 31px 16px;
+      text-align: left;
+    }
   }
   &:before {
     @include pseudo-elem;
@@ -31,7 +47,7 @@
   &--home {
     &:before {
       background-image: url('src/assets/images/banner-home.webp');
-      @media screen and (max-width: $breakpoint-mobile) {
+      @include mobile {
         background-size: 175%;
       }
     }
@@ -39,25 +55,9 @@
   &--about-us {
     &:before {
       background-image: url('src/assets/images/banner-about-us.webp');
-      @media screen and (max-width: $breakpoint-mobile) {
+      @include mobile {
         background-size: 115%;
       }
-    }
-  }
-  @media screen and (max-width: $breakpoint-laptopXl) {
-    margin: auto;
-    width: 70%;
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
-    border-radius: 10px;
-    height: 111px;
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    width: 100%;
-    &__title {
-      padding: 31px 110px 31px 16px;
-      text-align: left;
     }
   }
 }
