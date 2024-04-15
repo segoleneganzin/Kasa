@@ -1,5 +1,6 @@
 .housing-sheet__details {
   display: flex;
+  height: fit-content;
   justify-content: space-between;
   &-description,
   &-equipments {
@@ -8,6 +9,7 @@
   @media screen and (max-width: $breakpoint-laptopXl) {
     flex-direction: column;
     gap: 20px;
+    margin-top: 3px;
     &-description,
     &-equipments {
       width: 100%;

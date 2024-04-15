@@ -67,11 +67,17 @@ const Collapse = ({ title, textContent, listContent }) => {
         className={classNames.contentContainer + ' collapse__content-container'}
       >
         {listContent ? (
-          <ul className={classNames.content + ' collapse__content'}>
+          <ul
+            className={classNames.content + ' collapse__content'}
+            aria-hidden={isOpen}
+          >
             {listContentFormated}
           </ul>
         ) : (
-          <p className={classNames.content + ' collapse__content'}>
+          <p
+            className={classNames.content + ' collapse__content'}
+            aria-hidden={isOpen}
+          >
             {textContent}
           </p>
         )}

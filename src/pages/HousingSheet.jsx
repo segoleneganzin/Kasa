@@ -37,7 +37,10 @@ const HousingSheet = () => {
       ) : (
         filteredHousing && (
           <div className='housing-sheet'>
-            <SlideShow pictures={filteredHousing.pictures} />
+            <SlideShow
+              pictures={filteredHousing.pictures}
+              title={filteredHousing.title}
+            />
             {/* header */}
             <div className='housing-sheet__header'>
               {/* titles and tags section */}

@@ -84,6 +84,9 @@ a {
   font-size: 0.875rem;
   line-height: 142%;
   font-weight: 700;
+  @media screen and (max-width: $breakpoint-tablet) {
+    font-size: 0.625rem;
+  }
 }
 
 /***************************** host */
@@ -91,6 +94,9 @@ a {
   color: $brand-color;
   font-size: 1.125rem;
   line-height: 142%;
+  @media screen and (max-width: $breakpoint-tablet) {
+    font-size: 0.75rem;
+  }
 }
 //*******************************************************PAGE
 
@@ -132,6 +138,12 @@ a {
 
 /***************************** housing sheet */
 .housing-sheet {
+  .collapse__title {
+    font-size: 1.125rem;
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 0.813rem;
+    }
+  }
   &__titles {
     h1 {
       color: $brand-color;
@@ -141,6 +153,23 @@ a {
     }
     p {
       font-size: 1.125rem;
+    }
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      h1 {
+        font-size: 1.775rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      h1 {
+        font-size: 1.125rem;
+      }
+      p {
+        font-size: 0.875rem;
+      }
     }
   }
 }
