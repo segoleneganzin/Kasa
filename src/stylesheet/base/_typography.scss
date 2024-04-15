@@ -1,79 +1,160 @@
 /***************************** TYPOGRAPHY *****************************/
-/***************************** general */
+/****************************************************** COLORS */
 body {
   color: $text-color;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
 }
+
 a {
   color: $link-color;
 }
 
-/*************************************** elements */
-.highlightText {
-  font-weight: 500;
-  font-size: 1.5rem;
-  @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 0.75rem;
-  }
-}
-
-/***************************** menu */
-.menu a {
-  @media screen and (max-width: $breakpoint-mobile) {
-    text-transform: uppercase;
-  }
-}
-
-/***************************** footer */
+.banner__title,
+.housing-card__title,
+.collapse__title,
+.tag,
+.slideshow__picture-index,
 .footer {
   color: white;
 }
 
-/***************************** banner */
-.banner__title {
-  color: #fff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 3rem;
+.error-page__message,
+.housing-sheet__titles h1,
+.error-page__type,
+.host__name {
+  color: $brand-color;
+}
+
+/****************************************************** FONTS */
+body {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+}
+
+/***************************************** font weight */
+.housing-card__title,
+.banner__title,
+.tag {
   font-weight: 700;
-  text-align: center;
-  @media screen and (max-width: $breakpoint-laptop) {
-    font-size: 2rem;
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
-    font-size: 1.5rem;
-    text-shadow: none;
+}
+
+.highlightText,
+.error-page__message,
+.housing-sheet__titles h1 {
+  font-weight: 500;
+}
+
+.collapse__content {
+  font-weight: 400;
+}
+
+/***************************************** font size */
+.highlightText {
+  font-size: 1.5rem;
+  @include mobile {
+    font-size: 0.75rem;
   }
 }
 
-/***************************** hosting card */
-.housing-card__title {
-  color: #fff;
+.error-page__message,
+.housing-sheet__titles h1 {
+  font-size: 2.25rem;
+  @include laptop {
+    font-size: 1.775rem;
+  }
+  @include mobile {
+    font-size: 1.125rem;
+  }
+}
+
+.collapse__content,
+.housing-card__title,
+.host__name,
+.slideshow__picture-index,
+.error-page__link,
+.housing-sheet .collapse__title,
+.housing-sheet__titles p {
   font-size: 1.125rem;
-  font-weight: 700;
+}
+
+.error-page__link,
+.housing-sheet__titles p {
+  @include laptop {
+    font-size: 1rem;
+  }
+  @include mobile {
+    font-size: 0.875rem;
+  }
+}
+
+/* banner */
+.banner__title {
+  font-size: 3rem;
+  @include laptop {
+    font-size: 2rem;
+  }
+  @include tablet {
+    font-size: 1.5rem;
+  }
+}
+
+.collapse__title,
+.housing-sheet .collapse__title {
+  @include laptop {
+    font-size: 1.125rem;
+  }
+  @include mobile {
+    font-size: 0.813rem;
+  }
+}
+
+/* collapse */
+.collapse__content,
+.host__name {
+  @include mobile {
+    font-size: 0.75rem;
+  }
+}
+
+/* tag */
+.tag {
+  font-size: 0.875rem;
+  @include tablet {
+    font-size: 0.625rem;
+  }
+}
+
+/* error page */
+.error-page__type {
+  font-size: 18rem;
+  @include laptop {
+    font-size: 10rem;
+  }
+  @include mobile {
+    font-size: 6rem;
+  }
+}
+
+/***************************************** line height */
+.housing-card__title,
+.collapse__content,
+.tag,
+.host__name,
+.error-page__message,
+.housing-sheet__titles h1 {
   line-height: 142%;
 }
 
-/***************************** collapse */
-.collapse {
-  &__title {
-    color: #fff;
+/***************************************** text transform */
+.menu a {
+  @include mobile {
+    text-transform: uppercase;
   }
-  &__content {
-    font-size: 1.125rem;
-    line-height: 142%;
-  }
-  @media screen and (max-width: $breakpoint-laptop) {
-    &__title {
-      font-size: 1.125rem;
-    }
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
-    &__title {
-      font-size: 0.813rem;
-    }
-    &__content {
-      font-size: 0.75rem;
-    }
+}
+
+/***************************************** text shadow */
+.banner__title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include tablet {
+    text-shadow: none;
   }
 }

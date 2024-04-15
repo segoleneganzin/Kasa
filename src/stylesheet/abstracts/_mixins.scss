@@ -10,3 +10,34 @@
   bottom: 0;
   left: 0;
 }
+
+// mixins for media queries
+
+@mixin mobileXS {
+  @media screen and (max-width: $breakpoint-mobileXS) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin laptopXL {
+  @media screen and (max-width: $breakpoint-laptopXL) {
+    @content;
+  }
+}

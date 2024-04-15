@@ -1,0 +1,48 @@
+.slideshow {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 415px;
+  position: relative;
+  width: 100%;
+  @include tablet {
+    height: 255px;
+  }
+  &__picture {
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    @include tablet {
+      border-radius: 10px;
+    }
+    &-container {
+      height: 100%;
+      width: 100%;
+    }
+    &-index {
+      bottom: 24px;
+      position: absolute;
+    }
+  }
+  &__arrows {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 23px 25px;
+    position: absolute;
+    width: 100%;
+    @include tablet {
+      padding: 0 5px;
+    }
+  }
+  &__arrow svg {
+    height: 80px;
+    width: 48px;
+    @include tablet {
+      height: 24px;
+      width: auto;
+    }
+  }
+}

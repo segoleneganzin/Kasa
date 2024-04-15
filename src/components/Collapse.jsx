@@ -1,18 +1,34 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
+import { mobile } from '../utils/reusableConst';
 
-const Collapse = ({ title, textContent }) => {
-  const width = window.innerWidth;
-  const mobile = width <= 425;
+/**
+ * @component
+ * @param {Object} props
+ * @param {string} props.title
+ * @param {string} props.textContent
+ * @param {string[]} props.listContent
+ * @returns {JSX.Element}
+ */
+const Collapse = ({ title, textContent, listContent }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px');
+  const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px'); // manage height for smooth open close
+  // manage open close element className for transition
   const [classNames, setClassNames] = useState({
     arrow: '',
     contentContainer: '',
-    contentText: '',
+    content: '',
   });
 
   const heightRef = useRef();
+
+  // if content is a list, like for housing equipments
+  let listContentFormated;
+  if (listContent) {
+    listContentFormated = listContent.map((item, index) => (
+      <li key={index}>{item}</li>
+    ));
+  }
 
   useEffect(() => {
     setContentHeight(
@@ -23,11 +39,9 @@ const Collapse = ({ title, textContent }) => {
       contentContainer: isOpen
         ? 'collapse__content-container--open'
         : 'collapse__content-container--close',
-      contentText: isOpen
-        ? 'collapse__content-text--open'
-        : 'collapse__content-text--close',
+      content: isOpen ? 'collapse__content--open' : 'collapse__content--close',
     });
-  }, [isOpen, mobile]);
+  }, [isOpen]);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -61,15 +75,28 @@ const Collapse = ({ title, textContent }) => {
       <div
         className={classNames.contentContainer + ' collapse__content-container'}
       >
-        <p className={classNames.contentText + ' collapse__content-text'}>
-          {textContent}
-        </p>
+        {listContent ? (
+          <ul
+            className={classNames.content + ' collapse__content'}
+            aria-hidden={isOpen}
+          >
+            {listContentFormated}
+          </ul>
+        ) : (
+          <p
+            className={classNames.content + ' collapse__content'}
+            aria-hidden={isOpen}
+          >
+            {textContent}
+          </p>
+        )}
       </div>
     </div>
   );
 };
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  textContent: PropTypes.string.isRequired,
+  textContent: PropTypes.string,
+  listContent: PropTypes.arrayOf(PropTypes.string),
 };
 export default Collapse;

@@ -1,4 +1,4 @@
-/***************************** LOADER COMPONENT *****************************/
+/***************************** LOADER *****************************/
 .loader {
   align-items: center;
   display: flex;
@@ -15,11 +15,11 @@
     z-index: 99;
     animation: loader 2s infinite ease-in-out;
     animation-fill-mode: both;
-    @media screen and (max-width: $breakpoint-laptop) {
+    @include laptop {
       height: 50px;
       width: 50px;
     }
-    @media screen and (max-width: $breakpoint-mobile) {
+    @include mobile {
       height: 20px;
       width: 20px;
     }

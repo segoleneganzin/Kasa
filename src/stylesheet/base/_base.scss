@@ -23,10 +23,15 @@ main {
   flex-direction: column;
   gap: 43px;
   margin: 50px 100px;
-  @media screen and (max-width: $breakpoint-laptop) {
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+  }
+  @include laptop {
     margin: 27px 20px;
   }
-  @media screen and (max-width: $breakpoint-mobile) {
+  @include mobile {
     gap: 22px;
   }
 }
@@ -38,8 +43,4 @@ a {
   text-decoration: none;
   cursor: pointer;
   width: fit-content;
-  //   @include on-event {
-  //     color: $text-color;
-  //     text-decoration: underline;
-  //   }
 }

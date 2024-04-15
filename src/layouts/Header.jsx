@@ -1,11 +1,9 @@
 import Menu from './Menu';
 import logoDesktop from '../assets/images/LOGODesktop.svg';
 import logoMobile from '../assets/images/LOGOMobile.svg';
+import { mobile } from '../utils/reusableConst';
 
 const Header = () => {
-  // manage responsive img
-  const width = window.innerWidth;
-  const mobile = width <= 425;
   return (
     <header className='header'>
       <img

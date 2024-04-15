@@ -1,8 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 const Menu = () => {
   const location = useLocation();
-  const currentUrl = location.pathname;
+  const currentUrl = location.pathname; // use for manage css
   return (
     <nav className='menu'>
       <Link

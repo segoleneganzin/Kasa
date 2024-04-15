@@ -1,3 +1,4 @@
+/***************************** HOUSINGS *****************************/
 .housings {
   background-color: $grey;
   border-radius: 25px;
@@ -9,15 +10,15 @@
     grid-row-gap: 50px;
     padding: 56px 50px;
     position: relative;
-    @media screen and (max-width: $breakpoint-laptopXl) {
+    @include laptopXL {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (max-width: $breakpoint-laptop) {
+    @include laptop {
       background-color: white;
       grid-gap: 20px;
       padding: 0px;
     }
-    @media screen and (max-width: $breakpoint-tablet) {
+    @include tablet {
       grid-template-columns: repeat(1, 1fr);
     }
   }

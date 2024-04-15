@@ -1,3 +1,4 @@
+/***************************** HOUSING CARD *****************************/
 .housing-card {
   border-radius: 10px;
   display: flex;
@@ -5,11 +6,11 @@
   position: relative;
   overflow: hidden;
   width: 340px;
-  @media screen and (max-width: $breakpoint-laptopXl) {
+  @include laptopXL {
     height: 255px;
     width: 335px;
   }
-  @media screen and (max-width: $breakpoint-mobileXs) {
+  @include mobileXS {
     width: 280px;
   }
   &__picture {

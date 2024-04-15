@@ -2,12 +2,16 @@ import { useFetch } from '../api/useFetch';
 import HousingCard from '../components/HousingCard';
 import Loader from '../components/Loader';
 
+/**
+ * Layout to display housings
+ * @returns {JSX.Element}
+ */
 const Housings = () => {
   // TODO sessionStorage ?
+  // get the datas from json file
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`
   );
-  // console.log(isLoading);
 
   return (
     <section className='housings'>
