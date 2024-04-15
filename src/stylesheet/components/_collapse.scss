@@ -5,8 +5,8 @@
   flex-direction: column;
   gap: 0px;
   overflow: hidden;
-  transition: height 1s ease-in;
-  width: 1023px;
+  transition: height 1s ease-in-out;
+  width: 100%;
   &__header {
     align-items: center;
     background-color: $brand-color;
@@ -24,47 +24,40 @@
     width: 32px;
     &--open {
       transform: rotate(-180deg);
-      transition: 1s ease-in;
+      transition: 1s ease-in-out;
     }
     &--close {
       transform: rotate(0deg);
-      transition: 1s ease-out;
+      transition: 1s ease-in-out;
     }
   }
   &__content {
     &-container {
       background-color: $light-grey;
       border-radius: 5px;
-      opacity: 0;
       padding: 20px;
       transform: translateY(-100%);
       transform-origin: top;
-      transition: opacity 0.3s ease-in-out;
       &--open {
-        opacity: 1;
-        transform: translateY(0px);
-        transition: 1s ease-in;
+        transform: translateY(0%);
+        transition: transform 1s ease-in-out;
       }
       &--close {
-        opacity: 0;
         transform: translateY(-100%);
-        transition: 1s 0.3s ease-out;
+        transition: transform 1s ease-in-out;
       }
     }
-    &-text {
-      transform: translateY(-100%);
-      &--open {
-        transform: translateY(0px);
-        transition: 1s 0.3s ease-in-out;
-      }
-      &--close {
-        transform: translateY(-100%);
-        transition: 1s ease-in-out;
-      }
+    opacity: 0;
+    &--open {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    &--close {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
   }
   @media screen and (max-width: $breakpoint-laptopXl) {
-    width: 582px;
     &__header {
       padding: 10px;
     }
@@ -73,20 +66,37 @@
       width: 25px;
     }
   }
-  @media screen and (max-width: $breakpoint-tablet) {
-    width: 400px;
-  }
   @media screen and (max-width: $breakpoint-mobile) {
-    width: 319px;
+    transition: height 0.3s ease-in-out;
     &__header {
       height: 30px;
     }
     &__arrow {
       height: 20px;
       width: 20px;
+      &--open {
+        transition: 0.3s ease-in-out;
+      }
+      &--close {
+        transition: 0.3s ease-in-out;
+      }
     }
-  }
-  @media screen and (max-width: $breakpoint-mobileXs) {
-    width: 280px;
+    &__content {
+      &-container {
+        padding-top: 13px;
+        &--open {
+          transition: transform 0.3s ease-in-out;
+        }
+        &--close {
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+      &--open {
+        transition: opacity 0.3s ease-in-out;
+      }
+      &--close {
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
   }
 }

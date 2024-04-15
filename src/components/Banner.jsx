@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Banner = ({ title, page }) => {
   return (
     <section className={`banner banner--${page}`}>
-      <h1 className='banner__title'>{title}</h1>
+      {title && <h1 className='banner__title'>{title}</h1>}
     </section>
   );
 };

@@ -1,5 +1,10 @@
 /***************************** HELPERS *****************************/
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 /**
  * Hide element while making it readable for screen readers
  */

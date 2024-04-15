@@ -12,6 +12,7 @@ const Router = () => {
       <Route path='/apropos' element={<AboutUs />} />
       <Route path='/logement/:housingId' element={<HousingSheet />} />
       {/* NotFound */}
+      <Route path='/erreur' element={<Error404 />} />
       <Route path='*' element={<Error404 />} />
     </Routes>
   );

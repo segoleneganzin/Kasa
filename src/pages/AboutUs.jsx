@@ -6,12 +6,8 @@ const AboutUs = () => {
     <main className='about-us'>
       <Banner page={'about-us'} />
       <section className='collapses'>
-        {aboutUsList.map((item) => (
-          <Collapse
-            title={item.title}
-            textContent={item.content}
-            key={item.title}
-          />
+        {aboutUsList.map((item, index) => (
+          <Collapse title={item.title} textContent={item.content} key={index} />
         ))}
       </section>
     </main>
