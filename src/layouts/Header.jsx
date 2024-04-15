@@ -4,8 +4,7 @@ import logoMobile from '../assets/images/LOGOMobile.svg';
 
 const Header = () => {
   // manage responsive img
-  const width = window.innerWidth;
-  const mobile = width <= 425;
+  const mobile = window.innerWidth <= 425;
   return (
     <header className='header'>
       <img
