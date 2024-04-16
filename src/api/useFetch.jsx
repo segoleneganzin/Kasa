@@ -9,9 +9,16 @@ export function useFetch(url) {
     if (!url) return;
     async function fetchData() {
       try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setData(data);
+        // use sessioStorage to avoid querying the database each time.
+        // This is possible here because the content is not "live".
+        if (window.sessionStorage.getItem(url) === null) {
+          const response = await fetch(url);
+          const data = await response.json();
+          setData(data);
+          sessionStorage.setItem(url, JSON.stringify(data));
+        } else {
+          setData(JSON.parse(window.sessionStorage.getItem(url)));
+        }
       } catch (err) {
         console.log(err);
         setError(true);
