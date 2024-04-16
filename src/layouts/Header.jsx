@@ -1,9 +1,10 @@
 import Menu from './Menu';
 import logoDesktop from '../assets/images/LOGODesktop.svg';
 import logoMobile from '../assets/images/LOGOMobile.svg';
-import { mobile } from '../utils/reusableConst';
 
 const Header = () => {
+  const mobile = window.innerWidth <= 425;
+
   return (
     <header className='header'>
       <img

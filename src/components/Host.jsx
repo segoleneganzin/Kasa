@@ -8,9 +8,14 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element}
  */
 const Host = ({ hostName, hostPicture }) => {
+  const [hostFirstName, hostLastName] = hostName.split(' ');
   return (
     <div className='host'>
-      <p className='host__name'>{hostName}</p>
+      <p className='host__name'>
+        {hostFirstName}
+        <br />
+        {hostLastName}
+      </p>
       <img
         src={hostPicture}
         alt={'Photo de ' + hostName}

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
-import { mobile } from '../utils/reusableConst';
 
 /**
  * @component
@@ -10,6 +9,7 @@ import { mobile } from '../utils/reusableConst';
  * @returns {JSX.Element}
  */
 const SlideShow = ({ pictures, title }) => {
+  const mobile = window.innerWidth <= 425;
   const previousCarouselPicture = useRef();
   const nextCarouselPicture = useRef();
   const [currentPicture, setCurrentPicture] = useState(pictures[0]);
