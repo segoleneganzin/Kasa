@@ -74,19 +74,14 @@ const Collapse = ({ title, textContent, listContent }) => {
       {/* only visible when isOpen */}
       <div
         className={classNames.contentContainer + ' collapse__content-container'}
+        aria-hidden={isOpen}
       >
         {listContent ? (
-          <ul
-            className={classNames.content + ' collapse__content'}
-            aria-hidden={isOpen}
-          >
+          <ul className={classNames.content + ' collapse__content'}>
             {listContentFormated}
           </ul>
         ) : (
-          <p
-            className={classNames.content + ' collapse__content'}
-            aria-hidden={isOpen}
-          >
+          <p className={classNames.content + ' collapse__content'}>
             {textContent}
           </p>
         )}

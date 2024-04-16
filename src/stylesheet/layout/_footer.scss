@@ -1,10 +1,9 @@
 /***************************** FOOTER *****************************/
 
 .footer {
+  @include flex-col;
   align-items: center;
   background-color: black;
-  display: flex;
-  flex-direction: column;
   gap: 28px;
   padding: 66px 464px 29px;
   text-align: center;

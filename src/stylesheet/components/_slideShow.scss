@@ -1,7 +1,6 @@
 .slideshow {
+  @include flex-col;
   align-items: center;
-  display: flex;
-  flex-direction: column;
   height: 415px;
   position: relative;
   width: 100%;
@@ -9,16 +8,14 @@
     height: 255px;
   }
   &__picture {
-    border-radius: 25px;
-    height: 100%;
+    @include fullHeightWidth;
+    border-radius: $largeRadius;
     object-fit: cover;
-    width: 100%;
     @include tablet {
-      border-radius: 10px;
+      border-radius: $mediumRadius;
     }
     &-container {
-      height: 100%;
-      width: 100%;
+      @include fullHeightWidth;
     }
     &-index {
       bottom: 24px;
@@ -26,13 +23,12 @@
     }
   }
   &__arrows {
+    @include fullHeightWidth;
     align-items: center;
     display: flex;
-    height: 100%;
     justify-content: space-between;
     padding: 0 23px 25px;
     position: absolute;
-    width: 100%;
     @include tablet {
       padding: 0 5px;
     }

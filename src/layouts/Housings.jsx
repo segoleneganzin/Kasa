@@ -1,4 +1,5 @@
 import { useFetch } from '../api/useFetch';
+import { Link } from 'react-router-dom';
 import HousingCard from '../components/HousingCard';
 import Loader from '../components/Loader';
 
@@ -22,11 +23,9 @@ const Housings = () => {
       ) : (
         <div className='housings__cards-container'>
           {data.map((housing) => (
-            <HousingCard
-              housingId={housing.id}
-              housings={data}
-              key={housing.id}
-            />
+            <Link to={`/logement/${housing.id}`} key={housing.id}>
+              <HousingCard title={housing.title} cover={housing.cover} />
+            </Link>
           ))}
         </div>
       )}

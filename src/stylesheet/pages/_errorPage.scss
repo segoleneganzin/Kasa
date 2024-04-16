@@ -1,8 +1,7 @@
 /***************************** ERROR PAGE *****************************/
 .error-page {
+  @include flex-col;
   align-items: center;
-  display: flex;
-  flex-direction: column;
   gap: 139px;
   margin: 139px 50px;
   @include mobile {

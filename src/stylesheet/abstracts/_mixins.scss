@@ -2,17 +2,27 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin fullHeightWidth {
+  height: 100%;
+  width: 100%;
+}
+
 @mixin pseudo-elem {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
+  @include fullHeightWidth;
   bottom: 0;
+  content: '';
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 // mixins for media queries
-
 @mixin mobileXS {
   @media screen and (max-width: $breakpoint-mobileXS) {
     @content;

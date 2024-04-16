@@ -1,10 +1,10 @@
 .tag {
   background-color: $brand-color;
-  border-radius: 10px;
+  border-radius: $mediumRadius;
   padding: 3px 30px;
   white-space: nowrap;
   @include tablet {
-    border-radius: 5px;
+    border-radius: $smallRadius;
     height: 20px;
     padding: 3px 10px;
   }

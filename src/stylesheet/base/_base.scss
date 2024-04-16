@@ -19,8 +19,7 @@ body {
  * Basic styles for main
  */
 main {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   gap: 43px;
   margin: 50px 100px;
   a {

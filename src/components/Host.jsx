@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { mobile, tablet } from '../utils/reusableConst';
 
 /**
  * @component
@@ -16,8 +15,6 @@ const Host = ({ hostName, hostPicture }) => {
         src={hostPicture}
         alt={'Photo de ' + hostName}
         className='host__picture'
-        height={tablet ? (mobile ? 32 : 50) : 64}
-        width={tablet ? (mobile ? 32 : 50) : 64}
       />
     </div>
   );

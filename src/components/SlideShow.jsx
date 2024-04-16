@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
-import { mobile, tablet, laptop } from '../utils/reusableConst';
+import { mobile } from '../utils/reusableConst';
 
 /**
  * @component
@@ -51,6 +51,7 @@ const SlideShow = ({ pictures, title }) => {
               height='80'
               viewBox='0 0 48 80'
               fill='none'
+              aria-hidden='true'
             >
               <path
                 d='M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z'
@@ -71,6 +72,7 @@ const SlideShow = ({ pictures, title }) => {
               height='80'
               viewBox='0 0 48 80'
               fill='none'
+              aria-hidden='true'
             >
               <path
                 d='M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z'
@@ -91,14 +93,12 @@ const SlideShow = ({ pictures, title }) => {
           alt={`${title}, photo ${pictures.indexOf(currentPicture) + 1} sur ${
             pictures.length
           }`}
-          height={tablet ? 255 : 415}
-          width={laptop ? window.innerWidth - 40 : window.innerWidth - 200}
           tabIndex={0}
         />
       </div>
       {/* only visible on screen over 425px and if there are more than 1 picture*/}
       {pictures.length > 1 && !mobile ? (
-        <p className='slideshow__picture-index'>
+        <p className='slideshow__picture-index' aria-hidden='true'>
           {pictures.indexOf(currentPicture) + 1}/{pictures.length}
         </p>
       ) : (
