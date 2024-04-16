@@ -8,7 +8,6 @@ import Loader from '../components/Loader';
  * @returns {JSX.Element}
  */
 const Housings = () => {
-  // TODO sessionStorage ?
   // get the datas from json file
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`

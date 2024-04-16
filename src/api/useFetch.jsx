@@ -12,11 +12,13 @@ export function useFetch(url) {
         // use sessioStorage to avoid querying the database each time.
         // This is possible here because the content is not "live".
         if (window.sessionStorage.getItem(url) === null) {
+          // console.log('uncached datas');
           const response = await fetch(url);
           const data = await response.json();
           setData(data);
           sessionStorage.setItem(url, JSON.stringify(data));
         } else {
+          // console.log('cached datas');
           setData(JSON.parse(window.sessionStorage.getItem(url)));
         }
       } catch (err) {
