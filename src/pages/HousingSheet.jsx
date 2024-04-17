@@ -17,7 +17,7 @@ const HousingSheet = () => {
 
   // get housings from json file
   const { data, isLoading, error } = useFetch(
-    window.location.origin + `/src/assets/datas/housingsAds.json`
+    window.location.origin + `/housingsAds.json`
   );
   // get housing by id
   if (!isLoading) {
