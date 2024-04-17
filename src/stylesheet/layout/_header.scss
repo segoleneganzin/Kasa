@@ -5,16 +5,16 @@
   display: flex;
   justify-content: space-between;
   margin: 45px 100px 0px;
-  @include laptop {
+  @include media-breakpoint($breakpoint-laptop) {
     margin: 20px 20px 0px;
   }
   &__logo {
     width: 210px;
     height: auto;
-    @include laptop {
+    @include media-breakpoint($breakpoint-laptop) {
       width: 145px;
     }
-    @include mobileXS {
+    @include media-breakpoint($breakpoint-mobileXS) {
       width: 100px;
     }
   }

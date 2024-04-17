@@ -6,7 +6,7 @@
   overflow: hidden;
   transition: height 1s ease-in-out;
   width: 100%;
-  @include mobile {
+  @include media-breakpoint($breakpoint-mobile) {
     transition: height 0.3s ease-in-out;
   }
   &__header {
@@ -19,10 +19,10 @@
     padding: 10px 15px;
     width: 100%;
     z-index: 2;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       padding: 10px;
     }
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       height: 30px;
     }
   }
@@ -30,25 +30,25 @@
     cursor: pointer;
     height: 32px;
     width: 32px;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       height: 25px;
       width: 25px;
     }
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       height: 20px;
       width: 20px;
     }
     &--open {
       transform: rotate(-180deg);
       transition: 1s ease-in-out;
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         transition: 0.3s ease-in-out;
       }
     }
     &--close {
       transform: rotate(0deg);
       transition: 1s ease-in-out;
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         transition: 0.3s ease-in-out;
       }
     }
@@ -58,14 +58,14 @@
     &--open {
       opacity: 1;
       transition: opacity 1s ease-in-out;
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         transition: opacity 0.3s ease-in-out;
       }
     }
     &--close {
       opacity: 0;
       transition: opacity 1s ease-in-out;
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         transition: opacity 0.3s ease-in-out;
       }
     }
@@ -75,20 +75,20 @@
       padding: 20px;
       transform: translateY(-100%);
       transform-origin: top;
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         padding-top: 13px;
       }
       &--open {
         transform: translateY(0%);
         transition: transform 1s ease-in-out;
-        @include mobile {
+        @include media-breakpoint($breakpoint-mobile) {
           transition: transform 0.3s ease-in-out;
         }
       }
       &--close {
         transform: translateY(-100%);
         transition: transform 1s ease-in-out;
-        @include mobile {
+        @include media-breakpoint($breakpoint-mobile) {
           transition: transform 0.3s ease-in-out;
         }
       }

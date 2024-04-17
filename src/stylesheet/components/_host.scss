@@ -10,11 +10,11 @@
     border-radius: 100%;
     height: 64px;
     width: 64px;
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       height: 50px;
       width: 50px;
     }
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       height: 32px;
       width: 32px;
     }

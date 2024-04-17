@@ -10,15 +10,15 @@
     grid-row-gap: 50px;
     padding: 56px 50px;
     position: relative;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include laptop {
+    @include media-breakpoint($breakpoint-laptop) {
       background-color: white;
       grid-gap: 20px;
       padding: 0px;
     }
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       grid-template-columns: repeat(1, 1fr);
     }
   }

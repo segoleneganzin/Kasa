@@ -4,13 +4,13 @@
   align-items: center;
   gap: 139px;
   margin: 139px 50px;
-  @include mobile {
+  @include media-breakpoint($breakpoint-mobile) {
     gap: 113px;
     margin: 113px 50px;
   }
   &__message {
     text-align: center;
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       padding: 0 37px;
     }
   }

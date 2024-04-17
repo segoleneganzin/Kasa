@@ -6,11 +6,11 @@
   position: relative;
   overflow: hidden;
   width: 340px;
-  @include laptopXL {
+  @include media-breakpoint($breakpoint-laptopXL) {
     height: 255px;
     width: 335px;
   }
-  @include mobileXS {
+  @include media-breakpoint($breakpoint-mobileXS) {
     width: 280px;
   }
   &__picture {

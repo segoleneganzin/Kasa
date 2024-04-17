@@ -2,24 +2,24 @@
   @include flex-col;
   gap: 24px;
   min-height: 55vh; // for loader
-  @include tablet {
+  @include media-breakpoint($breakpoint-tablet) {
     gap: 10px;
   }
   &__header {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       flex-direction: column;
       gap: 16px;
     }
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       margin-top: 0;
     }
     &-titles-tags {
       @include flex-col;
       gap: 20px;
-      @include tablet {
+      @include media-breakpoint($breakpoint-tablet) {
         gap: 10px;
       }
     }
@@ -27,7 +27,7 @@
       @include flex-col;
       align-items: flex-end;
       gap: 21px;
-      @include laptopXL {
+      @include media-breakpoint($breakpoint-laptopXL) {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
