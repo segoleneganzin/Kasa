@@ -21,5 +21,8 @@
     @include media-breakpoint($breakpoint-tablet) {
       grid-template-columns: repeat(1, 1fr);
     }
+    @include min-media-breakpoint($breakpoint-desktopXL) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

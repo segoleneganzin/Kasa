@@ -28,3 +28,9 @@
     @content;
   }
 }
+
+@mixin min-media-breakpoint($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
