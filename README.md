@@ -62,15 +62,15 @@ Collapse :
 
 ### 🏆 Compétences évaluées
 
-➡ Créer des composants avec React.<br>
+➡ Créer des composants avec React<br>
 
-➡ Développer les routes d'une application web avec React Router. <br>
+➡ Développer les routes d'une application web avec React Router <br>
 
-➡ Initialiser une application web avec un framework.<br>
+➡ Initialiser une application web avec un framework<br>
 
 ### 🔨 Installation du projet
 
-➡ Télécharger le dossier ducode et le dézipper
-➡ Ouvrir le dossier dans VSCode (ou tout autre IDE)
-➡ Installer les nodes-modules : `pnpm install`
-➡ Lancer l'application : `pnpm run dev`
+➡ Télécharger le dossier ducode et le dézipper<br>
+➡ Ouvrir le dossier dans VSCode (ou tout autre IDE)<br>
+➡ Installer les nodes-modules : `pnpm install`<br>
+➡ Lancer l'application : `pnpm run dev`<br>
