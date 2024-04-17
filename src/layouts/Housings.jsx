@@ -10,7 +10,7 @@ import Loader from '../components/Loader';
 const Housings = () => {
   // get the datas from json file
   const { data, isLoading, error } = useFetch(
-    window.location.origin + `/src/assets/datas/housingsAds.json`
+    window.location.origin + `/housingsAds.json`
   );
 
   return (

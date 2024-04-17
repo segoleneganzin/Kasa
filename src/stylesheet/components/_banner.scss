@@ -44,7 +44,7 @@
   }
   &--home {
     &:before {
-      background-image: url('src/assets/images/banner-home.webp');
+      background-image: url('/banner-home.webp');
       @include media-breakpoint($breakpoint-mobile) {
         background-size: 175%;
       }
@@ -52,7 +52,7 @@
   }
   &--about-us {
     &:before {
-      background-image: url('src/assets/images/banner-about-us.webp');
+      background-image: url('/banner-about-us.webp');
       @include media-breakpoint($breakpoint-mobile) {
         background-size: 115%;
       }
