@@ -8,7 +8,7 @@ import { useRef, useState } from 'react';
  * @param {string} props.title
  * @returns {JSX.Element}
  */
-const SlideShow = ({ pictures, title }) => {
+const Slideshow = ({ pictures, title }) => {
   const mobile = window.innerWidth <= 425;
   const previousCarouselPicture = useRef();
   const nextCarouselPicture = useRef();
@@ -19,7 +19,7 @@ const SlideShow = ({ pictures, title }) => {
    * @param {string} direction
    * @returns object
    */
-  const manageSlideShow = (direction) => {
+  const manageSlideshow = (direction) => {
     let pictureIndex = pictures.indexOf(currentPicture);
     if (direction === 'previous') {
       currentPicture === pictures[0]
@@ -40,7 +40,7 @@ const SlideShow = ({ pictures, title }) => {
         <div className='slideshow__arrows'>
           <a
             ref={previousCarouselPicture}
-            onClick={() => manageSlideShow('previous')}
+            onClick={() => manageSlideshow('previous')}
             aria-label='image précédente'
             aria-controls='display-medias'
             className='slideshow__arrow'
@@ -61,7 +61,7 @@ const SlideShow = ({ pictures, title }) => {
           </a>
           <a
             ref={nextCarouselPicture}
-            onClick={() => manageSlideShow('next')}
+            onClick={() => manageSlideshow('next')}
             aria-label='image suivante'
             aria-controls='display-medias'
             className='slideshow__arrow'
@@ -107,8 +107,8 @@ const SlideShow = ({ pictures, title }) => {
     </div>
   );
 };
-SlideShow.propTypes = {
+Slideshow.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
 };
-export default SlideShow;
+export default Slideshow;

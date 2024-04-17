@@ -7,7 +7,7 @@ import Rate from '../components/Rate';
 import Tags from '../layouts/Tags';
 import HousingSheetDetails from '../layouts/HousingSheetDetails';
 import HousingSheetTitles from '../layouts/HousingSheetTitles';
-import SlideShow from '../components/SlideShow';
+import Slideshow from '../components/Slideshow';
 
 const HousingSheet = () => {
   const { housingId } = useParams(); // get id from url
@@ -41,7 +41,7 @@ const HousingSheet = () => {
       ) : (
         filteredHousing && (
           <div className='housing-sheet'>
-            <SlideShow
+            <Slideshow
               pictures={filteredHousing.pictures}
               title={filteredHousing.title}
             />
