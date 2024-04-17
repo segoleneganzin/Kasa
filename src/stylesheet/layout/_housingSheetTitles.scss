@@ -1,6 +1,6 @@
 .housing-sheet__titles {
   @include flex-col;
-  @include laptopXL {
+  @include media-breakpoint($breakpoint-laptopXL) {
     gap: 5px;
   }
 }

@@ -8,7 +8,7 @@
   padding: 66px 464px 29px;
   text-align: center;
   width: 100%;
-  @include laptop {
+  @include media-breakpoint($breakpoint-laptop) {
     padding: 66px 120px 58px;
   }
   &__logo {

@@ -2,7 +2,7 @@
   display: flex;
   height: fit-content;
   justify-content: space-between;
-  @include laptopXL {
+  @include media-breakpoint($breakpoint-laptopXL) {
     flex-direction: column;
     gap: 20px;
     margin-top: 3px;
@@ -10,7 +10,7 @@
   &-description,
   &-equipments {
     width: 582px;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       width: 100%;
     }
   }

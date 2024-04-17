@@ -5,17 +5,17 @@
     gap: 30px;
     margin: auto;
     width: 1023px;
-    @include laptopXL {
+    @include media-breakpoint($breakpoint-laptopXL) {
       width: 582px;
     }
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       width: 400px;
     }
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       gap: 20px;
       width: 319px;
     }
-    @include mobileXS {
+    @include media-breakpoint($breakpoint-mobileXS) {
       width: 280px;
     }
   }

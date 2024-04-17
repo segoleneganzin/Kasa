@@ -4,14 +4,14 @@
   height: 415px;
   position: relative;
   width: 100%;
-  @include tablet {
+  @include media-breakpoint($breakpoint-tablet) {
     height: 255px;
   }
   &__picture {
     @include fullHeightWidth;
     border-radius: $largeRadius;
     object-fit: cover;
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       border-radius: $mediumRadius;
     }
     &-container {
@@ -29,14 +29,14 @@
     justify-content: space-between;
     padding: 0 23px 25px;
     position: absolute;
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       padding: 0 5px;
     }
   }
   &__arrow svg {
     height: 80px;
     width: 48px;
-    @include tablet {
+    @include media-breakpoint($breakpoint-tablet) {
       height: 24px;
       width: auto;
     }

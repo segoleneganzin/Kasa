@@ -3,7 +3,7 @@
   border-radius: $mediumRadius;
   padding: 3px 30px;
   white-space: nowrap;
-  @include tablet {
+  @include media-breakpoint($breakpoint-tablet) {
     border-radius: $smallRadius;
     height: 20px;
     padding: 3px 10px;

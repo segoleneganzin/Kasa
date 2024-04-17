@@ -9,15 +9,15 @@
   justify-content: center;
   overflow: hidden;
   z-index: 1;
-  @include laptopXL {
+  @include media-breakpoint($breakpoint-laptopXL) {
     margin: auto;
     width: 70%;
   }
-  @include tablet {
+  @include media-breakpoint($breakpoint-tablet) {
     border-radius: $mediumRadius;
     height: 111px;
   }
-  @include mobile {
+  @include media-breakpoint($breakpoint-mobile) {
     width: 100%;
   }
   &__title {
@@ -28,7 +28,7 @@
     justify-content: center;
     text-align: center;
     z-index: 3;
-    @include mobile {
+    @include media-breakpoint($breakpoint-mobile) {
       padding: 31px 110px 31px 16px;
       text-align: left;
     }
@@ -45,7 +45,7 @@
   &--home {
     &:before {
       background-image: url('src/assets/images/banner-home.webp');
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         background-size: 175%;
       }
     }
@@ -53,7 +53,7 @@
   &--about-us {
     &:before {
       background-image: url('src/assets/images/banner-about-us.webp');
-      @include mobile {
+      @include media-breakpoint($breakpoint-mobile) {
         background-size: 115%;
       }
     }

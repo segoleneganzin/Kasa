@@ -3,7 +3,7 @@
 .menu {
   display: flex;
   gap: 57px;
-  @include mobile {
+  @include media-breakpoint($breakpoint-mobile) {
     gap: 26px;
   }
   &__currentPage {
