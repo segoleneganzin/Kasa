@@ -1,6 +1,5 @@
 .housing-sheet__titles {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   @include laptopXL {
     gap: 5px;
   }

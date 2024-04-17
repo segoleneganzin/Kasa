@@ -11,7 +11,6 @@ import SlideShow from '../components/SlideShow';
 
 const HousingSheet = () => {
   const { housingId } = useParams(); // get id from url
-  // TODO sessionStorage ?
   const navigate = useNavigate(); // manage redirection in case of unknown housingId
 
   let filteredHousing;

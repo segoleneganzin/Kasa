@@ -1,7 +1,7 @@
 /***************************** HOUSINGS *****************************/
 .housings {
   background-color: $grey;
-  border-radius: 25px;
+  border-radius: $largeRadius;
   margin: auto;
   &__cards-container {
     display: grid;

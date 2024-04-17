@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { mobile, tablet } from '../utils/reusableConst';
 
 /**
  * @component
@@ -9,15 +8,18 @@ import { mobile, tablet } from '../utils/reusableConst';
  * @returns {JSX.Element}
  */
 const Host = ({ hostName, hostPicture }) => {
+  const [hostFirstName, hostLastName] = hostName.split(' ');
   return (
     <div className='host'>
-      <p className='host__name'>{hostName}</p>
+      <p className='host__name'>
+        {hostFirstName}
+        <br />
+        {hostLastName}
+      </p>
       <img
         src={hostPicture}
         alt={'Photo de ' + hostName}
         className='host__picture'
-        height={tablet ? (mobile ? 32 : 50) : 64}
-        width={tablet ? (mobile ? 32 : 50) : 64}
       />
     </div>
   );

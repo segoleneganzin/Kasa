@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
-import { mobile } from '../utils/reusableConst';
+// import { mobile } from '../utils/reusableConst';
 
 /**
  * @component
@@ -12,6 +12,7 @@ import { mobile } from '../utils/reusableConst';
  */
 const Collapse = ({ title, textContent, listContent }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const mobile = window.innerWidth <= 425;
   const [contentHeight, setContentHeight] = useState(mobile ? '30px' : '52px'); // manage height for smooth open close
   // manage open close element className for transition
   const [classNames, setClassNames] = useState({
@@ -41,7 +42,7 @@ const Collapse = ({ title, textContent, listContent }) => {
         : 'collapse__content-container--close',
       content: isOpen ? 'collapse__content--open' : 'collapse__content--close',
     });
-  }, [isOpen]);
+  }, [isOpen, mobile]);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -74,19 +75,14 @@ const Collapse = ({ title, textContent, listContent }) => {
       {/* only visible when isOpen */}
       <div
         className={classNames.contentContainer + ' collapse__content-container'}
+        aria-hidden={isOpen}
       >
         {listContent ? (
-          <ul
-            className={classNames.content + ' collapse__content'}
-            aria-hidden={isOpen}
-          >
+          <ul className={classNames.content + ' collapse__content'}>
             {listContentFormated}
           </ul>
         ) : (
-          <p
-            className={classNames.content + ' collapse__content'}
-            aria-hidden={isOpen}
-          >
+          <p className={classNames.content + ' collapse__content'}>
             {textContent}
           </p>
         )}

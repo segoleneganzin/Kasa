@@ -1,8 +1,7 @@
 /***************************** ABOUT US *****************************/
 .about-us {
   .collapses {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     gap: 30px;
     margin: auto;
     width: 1023px;

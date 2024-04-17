@@ -2,32 +2,32 @@
 .banner {
   align-items: center;
   background-color: black;
-  border-radius: 25px;
+  border-radius: $largeRadius;
   display: flex;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   height: 223px;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
   @include laptopXL {
     margin: auto;
     width: 70%;
   }
   @include tablet {
-    border-radius: 10px;
+    border-radius: $mediumRadius;
     height: 111px;
   }
   @include mobile {
     width: 100%;
   }
   &__title {
+    @include fullHeightWidth;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    height: 100%;
     text-align: center;
-    width: 100%;
-    z-index: 2;
+    z-index: 3;
     @include mobile {
       padding: 31px 110px 31px 16px;
       text-align: left;
@@ -35,14 +35,12 @@
   }
   &:before {
     @include pseudo-elem;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.7;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: block;
+    opacity: 0.7;
+    z-index: 2;
   }
   &--home {
     &:before {

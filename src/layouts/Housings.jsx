@@ -1,4 +1,5 @@
 import { useFetch } from '../api/useFetch';
+import { Link } from 'react-router-dom';
 import HousingCard from '../components/HousingCard';
 import Loader from '../components/Loader';
 
@@ -7,7 +8,6 @@ import Loader from '../components/Loader';
  * @returns {JSX.Element}
  */
 const Housings = () => {
-  // TODO sessionStorage ?
   // get the datas from json file
   const { data, isLoading, error } = useFetch(
     window.location.origin + `/src/assets/datas/housingsAds.json`
@@ -22,11 +22,9 @@ const Housings = () => {
       ) : (
         <div className='housings__cards-container'>
           {data.map((housing) => (
-            <HousingCard
-              housingId={housing.id}
-              housings={data}
-              key={housing.id}
-            />
+            <Link to={`/logement/${housing.id}`} key={housing.id}>
+              <HousingCard title={housing.title} cover={housing.cover} />
+            </Link>
           ))}
         </div>
       )}
