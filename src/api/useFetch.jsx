@@ -7,7 +7,7 @@ export function useFetch(url) {
 
   useEffect(() => {
     if (!url) return;
-    async function fetchData() {
+    const fetchData = async () => {
       try {
         // use sessioStorage to avoid querying the database each time.
         // This is possible here because the content is not "live".
@@ -27,7 +27,7 @@ export function useFetch(url) {
       } finally {
         setLoading(false);
       }
-    }
+    };
 
     fetchData();
   }, [url]);
