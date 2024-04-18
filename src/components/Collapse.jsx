@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
-// import { mobile } from '../utils/reusableConst';
 
 /**
  * @component

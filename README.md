@@ -16,7 +16,7 @@ L'équipe back-end n'étant pas encore formée, les données sont stockées dans
 
 ### 💡 Outils et technos
 
-[![My Skills](https://skillicons.dev/icons?i=html,react,sass,vite,figma,github,pnpm)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,react,sass,vite,figma,github,pnpm,vercel)](https://skillicons.dev)
 
 ### ⚙ Contraintes techniques
 
