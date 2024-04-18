@@ -1,7 +1,6 @@
 .housing-sheet__details {
   display: flex;
   height: fit-content;
-  // justify-content: space-between;
   gap: 76px;
   @include media-breakpoint($breakpoint-laptopXL) {
     flex-direction: column;
@@ -11,8 +10,5 @@
   &-description,
   &-equipments {
     width: 100%;
-    @include media-breakpoint($breakpoint-laptopXL) {
-      width: 100%;
-    }
   }
 }
