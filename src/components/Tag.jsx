@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element}
  */
 const Tag = ({ name }) => {
-  return <span className='tag'>{name}</span>;
+  return <p className='tag'>{name}</p>;
 };
 Tag.propTypes = {
   name: PropTypes.string,
